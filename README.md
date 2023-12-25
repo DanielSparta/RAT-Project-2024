@@ -6,6 +6,11 @@
 - NET Framework, tested at windows 11, 10, 8
 
 # Info
+This RAT project made for fun, I'm working on updates often.
+I started with this project because i had so many ideas, with code i can be creative.
+
+i made a previous RAT project at 2022(https://github.com/DanielSparta/RAT-Project-2022)
+but its code is very bad.
 
 # Client side
 Program.cs 
