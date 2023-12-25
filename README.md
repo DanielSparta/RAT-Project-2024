@@ -1,7 +1,8 @@
 # 2024 RAT projet
  Fully windows defender bypass + persistence
 
- 
+ Client side documentation:
+
 Program.cs
         Main entry of the prgoram. This entry doing some important things:
         1. If its first time program opened, ask for admin privleges, then create registry keys, and then open the Fake GUI app
