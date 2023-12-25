@@ -60,3 +60,8 @@ and then code will go to Reconnect() class.
 data
 
 =============
+
+
+## Authors
+
+- [@DanielSparta](https://github.com/DanielSparta)
