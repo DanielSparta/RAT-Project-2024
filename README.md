@@ -6,12 +6,6 @@
 - NET Framework, tested at windows 11, 10, 8
 
 # Info
-**Table of Contents**
-
-[TOCM]
-
-[TOC]
-
 
 ##Client side
 **Program.cs** -Main entry of the prgoram. This entry doing 2 important things:
