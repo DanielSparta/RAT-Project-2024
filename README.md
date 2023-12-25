@@ -7,15 +7,15 @@
 
 # Info
 
-#Client side
+# Client side
 **Program.cs** -Main entry of the prgoram. This entry doing 2 important things:
 1. If its first time program opened, ask for admin privleges, then create registry keys, and then open the Fake GUI app
 2. Establishing socket connection to server
 
-# Folders at the client side
+**Folders at the client side**
        
-FakeProgram Folder (1 class inside): 
- 1. GUI app that opens only once after program opens. At the second time opening it will not be shown.
+- FakeProgram Folder (1 class inside): 
+ - 1. GUI app that opens only once after program opens. At the second time opening it will not be shown.
 
 Server Folder (1 class inside):
 1. Server-Client communication. Receiving Socket data as AES, decrypting it, it goes into TLV protocol, then to Switch function that decide what is the reason that stands behind each socket data that has been received (Screen stream? Computer shutdown? Delete app?)
