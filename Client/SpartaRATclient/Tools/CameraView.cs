@@ -17,6 +17,7 @@ using System.Threading;
 
 namespace SpartaRATclient
 {
+    //@TODO: Alot bugs, code not work anymore due library errors, need to be fixed.
     public class CameraView
     {
         private Server MainInstance;
