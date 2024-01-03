@@ -1,22 +1,15 @@
 ### Features
 
-
-![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/bc53dfcf-18ce-406c-b6a8-e34dd3c51d35)
-
-![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/21ed04f8-30e4-49c7-95a0-9231817bb765)
-
-![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/d228432f-87b1-4a0e-8c2f-5643d0385c13)
-
-![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/d3319c74-cf67-417e-9cb6-25c3a5c67905)
-
-
-
-
-
+# Why my RAT is better than the others?
 - Windows defender full bypass using Exclude list.
 - Windows defender Exclude list bypass (app not showing at windows defender GUI whitelist).
 - Persistence (using task scheduler, every 5 minutes the program restarting if not opened).
 - NET Framework, tested at the latest windows 11, 10, 8 versions.
+- Open source & Easy to contact the developer
+
+![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/21ed04f8-30e4-49c7-95a0-9231817bb765)
+
+![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/d228432f-87b1-4a0e-8c2f-5643d0385c13)
 
 # Info
 This RAT project made for fun, I'm working on updates often.
