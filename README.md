@@ -13,10 +13,10 @@
 
 
 
-- Windows defender full bypass using Exclude list
-- Windows defender Exclude list bypass (app not showing at windows defender GUI whitelist)
-- Persistence (using task scheduler, every 5 minutes the program restarting if not opened)
-- NET Framework, tested at windows 11, 10, 8
+- Windows defender full bypass using Exclude list.
+- Windows defender Exclude list bypass (app not showing at windows defender GUI whitelist).
+- Persistence (using task scheduler, every 5 minutes the program restarting if not opened).
+- NET Framework, tested at the latest windows 11, 10, 8 versions.
 
 # Info
 This RAT project made for fun, I'm working on updates often.
