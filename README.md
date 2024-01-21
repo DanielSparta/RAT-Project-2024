@@ -6,6 +6,7 @@
 - Persistence (using task scheduler).
 - NET Framework, tested at the latest windows 11, 10, 8 versions.
 - Open source & Easy to contact the developer
+- Code written really good
 
 ![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/21ed04f8-30e4-49c7-95a0-9231817bb765)
 
