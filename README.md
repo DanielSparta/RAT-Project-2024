@@ -3,7 +3,7 @@ This project is still under work, I will add alot more features.
 I update this project very often.
 
 # Why my RAT is better than the others?
-- Windows defender full bypass using Exclude list.
+- Windows defender full bypass using Exclude list and more AV Bypass techniques.
 - Windows defender Exclude list bypass (app not showing at windows defender GUI whitelist while it is).
 - Persistence (using task scheduler).
 - .NET Framework, tested at the latest windows 11, 10, 8 versions.
