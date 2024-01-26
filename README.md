@@ -1,4 +1,4 @@
-### Ultimate Sparta RAT C# Project
+### Ultimate SpartaRAT C# Project
 This project is still under work, I will add alot more features.
 I update this project very often.
 
