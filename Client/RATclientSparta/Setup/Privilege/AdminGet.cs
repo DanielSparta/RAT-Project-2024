@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace SpartaRATclient.Setup.PrivilegeCheck
 {
-    public class Get
+    public class AdminGet
     {
         public bool GetAdmin()
         {

