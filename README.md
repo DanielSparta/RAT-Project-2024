@@ -4,7 +4,7 @@ I update this project very often.
 
 Legacy version of SpartaRAT (https://github.com/DanielSparta/RAT-Project-2022) - Created in 2022, with very bad code.
 
-# Why my RAT is better than the others?
+# Why SpartaRAT is better than the others?
 - Windows defender full bypass using Exclude list and more AV Bypass techniques.
 - Windows defender Exclude list bypass (app not showing at windows defender GUI whitelist while it is).
 - Persistence (using task scheduler).
