@@ -117,23 +117,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\פלא1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\פלא2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\פלא3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\פלא4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\פלא5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
