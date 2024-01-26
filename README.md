@@ -28,7 +28,7 @@ but its code is very bad.
 - Remote Shell
 - Computer speech form text
   
-# _Alot More Features Soon_
+**_Alot More Features Soon_**
 
 
 ## Authors
