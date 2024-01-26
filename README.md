@@ -29,6 +29,7 @@ but its code is very bad.
 - Computer speech form text
   
 **_Alot More Features Soon_**
+**_I would really appreciate any CR or ideas_**
 
 
 ## Authors
