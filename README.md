@@ -26,6 +26,7 @@ I started with this project because I had so many ideas, with code I can be crea
 - Screen Draw
 - Remote Shell
 - Computer speech form text
+- Screen Lock (Until password will enter, Working also after restart)
   
 **_Alot More Features Soon_**
 **_I would really appreciate any CR or ideas_**
