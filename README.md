@@ -11,6 +11,7 @@ Legacy version of SpartaRAT (https://github.com/DanielSparta/RAT-Project-2022) -
 - .NET Framework, tested at the latest windows 11, 10, 8 versions.
 - Open source & Easy to contact the developer
 - Really well written code
+  **This is just the beginning, crazy stuff will be added soon.**
 
 ![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/21ed04f8-30e4-49c7-95a0-9231817bb765)
 
