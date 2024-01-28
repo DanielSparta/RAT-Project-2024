@@ -8,7 +8,7 @@ Legacy version of SpartaRAT (https://github.com/DanielSparta/RAT-Project-2022) -
 - Windows defender full bypass using Exclude list and more AV Bypass techniques.
 - Windows defender Exclude list bypass (app not showing at windows defender GUI whitelist while it is).
 - Persistence (using task scheduler).
-- .NET Framework, tested at the latest windows 11, 10, 8 versions.
+- .NET Framework, tested at the latest windows 11, 10, 8.1 versions.
 - Open source & Easy to contact the developer
 - Really well written code
 
