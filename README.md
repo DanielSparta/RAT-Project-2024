@@ -14,9 +14,13 @@ Legacy version of SpartaRAT (https://github.com/DanielSparta/RAT-Project-2022) -
 
   **This is just the beginning, crazy stuff will be added soon.**
 
+# Desktop C&C Server
 ![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/21ed04f8-30e4-49c7-95a0-9231817bb765)
 
 ![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/d228432f-87b1-4a0e-8c2f-5643d0385c13)
+
+# Web C&C Server
+Coming soon
 
 # Info
 This RAT project made for fun, I work on updates often.
