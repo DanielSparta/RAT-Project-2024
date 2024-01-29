@@ -14,7 +14,7 @@ I update this project very often.
 - Open source & Easy to contact the developer
 - Really well written code
 
-  **This is just the beginning, crazy stuff will be added soon.**
+  **This is the beginning of the project, alot more stuff will be added soon.**
 
 # Desktop C&C Server
 ![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/21ed04f8-30e4-49c7-95a0-9231817bb765)
