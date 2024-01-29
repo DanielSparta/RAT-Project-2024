@@ -23,14 +23,12 @@ namespace RATclientSparta.Server
         public delegate void screenStreamEvent();
         public delegate void paintStreamEvent(byte[] message);
         public delegate void PaintConfig(byte[] message);
-        //public delegate void StopSharingCmaera();
 
         public event GotMessage ChatMessageEvent;
         public event LostConnection LostConnectionEvent;
         public event screenStreamEvent CloseScreenStream;
         public event paintStreamEvent PaintStream;
         public event PaintConfig PaintConfigs;
-        //public event StopSharingCmaera s_StopSharingCamera;
 
         public Socket SocketConnection = default(Socket);
         public bool ServerConnected = false;
@@ -42,7 +40,6 @@ namespace RATclientSparta.Server
             this.CloseScreenStream = delegate { };
             this.PaintStream = delegate { };
             this.PaintConfigs = delegate { };
-            //this.s_StopSharingCamera = delegate { };
             this.SocketConnection = ServerSocket;
             this.ServerConnected = true;
         }
@@ -66,7 +63,6 @@ namespace RATclientSparta.Server
                     //index 0 = type
                     byte type = tlv[0];
 
-
                     //index 1-6 = length
                     int lengthRead = BitConverter.ToInt32(tlv, 1);
 
@@ -79,7 +75,6 @@ namespace RATclientSparta.Server
 
                         //chat (Message Received)
                         case 1: ChatMessageEvent.Invoke(message); break;
-
 
                         //chat (Opening GUI screen)
                         case 2: if (Application.OpenForms.OfType<Chat>().Count() == 0) { new Thread(new ThreadStart(() => { Chat chat = new Chat(this); chat.ShowDialog(); })).Start(); } break;
@@ -113,17 +108,6 @@ namespace RATclientSparta.Server
 
                         //Creating registry value For the Screen lock in encoded password way
                         case 24: RegistryCreate Item = new RegistryCreate(); Item.Create("ScreenLock", message.ToString()); screenBlock.CheckIfLockRequired(); break;
-
-                            //CURRENTLY NOT IN USE
-                            //BlindShell command running
-                            //case 13: BlindShell command1 = new BlindShell(this); command1.Run(message); break;
-                            //case 14: BlindShell command2 = new BlindShell(this); command2.Run(Encoding.ASCII.GetBytes(@"shutdown /s /t 2")); break;
-
-                            //Camera sharing
-                            //case 18: ShareCamera(); break;
-                            //case 19: s_StopSharingCamera.Invoke(); break;
-
-
                     }
                 }
                 catch { }
@@ -133,12 +117,5 @@ namespace RATclientSparta.Server
             return; //returning - not connected
 
         }
-
-        /*
-        private void ShareCamera()
-        {
-            CameraView cam = new CameraView(this);
-            new Thread(new ThreadStart(cam.GrabCamera)).Start();
-        }*/
     }
 }
