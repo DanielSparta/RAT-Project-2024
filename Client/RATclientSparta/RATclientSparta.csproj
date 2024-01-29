@@ -47,10 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUIApp.cs">
+    <Compile Include="GUI\GUIApp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUIApp.Designer.cs">
+    <Compile Include="GUI\GUIApp.Designer.cs">
       <DependentUpon>GUIApp.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -97,7 +97,7 @@
     <Compile Include="Tools\Screen\ScreenShare.Designer.cs">
       <DependentUpon>ScreenShare.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GUIApp.resx">
+    <EmbeddedResource Include="GUI\GUIApp.resx">
       <DependentUpon>GUIApp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
