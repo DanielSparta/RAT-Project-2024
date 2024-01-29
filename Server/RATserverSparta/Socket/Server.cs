@@ -85,7 +85,6 @@ namespace RATserverSparta.Sockets
             })).Start();
 
             //Sending each client to his own class instance
-            //Notice that there is no need to create Thread for each client, because the Delegate itself runs on new thread already.
             new Thread(new ThreadStart(() =>
             {
                 ClientClassInstance.Receive();
