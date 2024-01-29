@@ -1,12 +1,10 @@
 ### Ultimate SpartaRAT C# Project
 # Info
 This RAT project made for fun, I work on updates often.
-I started with this project because I had so many ideas, with code I can be creative.
-
-This project is still under work, I will add alot more features.
+I started with this project because I had so many ideas, with code I can be creative. This project is still under work, I will add alot more features.
 I update this project very often.
 
-Legacy version of SpartaRAT (https://github.com/DanielSparta/RAT-Project-2022) - Created in 2022, with very bad code.
+**I will greatly appreciate all those who could invest their time in PR (Pull Request) or CR (Code Review) my project**
 
 # Why SpartaRAT is better than the others?
 - Windows defender full bypass using Exclude list and more AV Bypass techniques.
@@ -32,11 +30,13 @@ Coming soon
 - Screen Draw
 - Remote Shell
 - Computer speech form text
-- Screen Lock (Until password will enter, Working also after computer restart)
+- Screen Lock (Also working after computer restart)
   
 **_Alot More Features Soon_**
 **_I would really appreciate any CR or ideas_**
 
+## Legacy version
+Legacy version of SpartaRAT (https://github.com/DanielSparta/RAT-Project-2022) - Created in 2022, with very bad code.
 
 ## Authors
 
