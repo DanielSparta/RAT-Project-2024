@@ -3,6 +3,9 @@
 This RAT project made for fun, I work on updates often.
 I started with this project because I had so many ideas, with code I can be creative.
 
+**I will greatly appreciate all those who could invest their time in PR or CR my project***
+
+
 This project is still under work, I will add alot more features.
 I update this project very often.
 
