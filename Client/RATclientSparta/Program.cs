@@ -16,7 +16,7 @@ namespace RATclientSparta
     public class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// RAT Client side program
         /// </summary>
         [STAThread]
         static void Main()
