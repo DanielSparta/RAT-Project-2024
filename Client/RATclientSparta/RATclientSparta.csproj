@@ -60,6 +60,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Server\Read.cs" />
     <Compile Include="Server\Send.cs" />
     <Compile Include="Server\Server.cs" />
     <Compile Include="Setup\Exclusion\Exclusion.cs" />
