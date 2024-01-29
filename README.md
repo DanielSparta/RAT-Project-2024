@@ -4,7 +4,7 @@ This RAT project made for fun, I work on updates often.
 I started with this project because I had so many ideas, with code I can be creative. This project is still under work, I will add alot more features.
 I update this project very often.
 
-**I will greatly appreciate all those who could invest their time in PR or CR my project**
+**I will greatly appreciate all those who could invest their time in PR (Pull Request) or CR (Code Review) my project**
 
 # Why SpartaRAT is better than the others?
 - Windows defender full bypass using Exclude list and more AV Bypass techniques.
