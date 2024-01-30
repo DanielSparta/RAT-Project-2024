@@ -72,6 +72,12 @@
     <Compile Include="Tools\Chat\Chat.Designer.cs">
       <DependentUpon>Chat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools\Screen\ScreenLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Screen\ScreenLock.Designer.cs">
+      <DependentUpon>ScreenLock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\Screen\ScreenShare.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </Compile>
     <EmbeddedResource Include="Tools\Chat\Chat.resx">
       <DependentUpon>Chat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Screen\ScreenLock.resx">
+      <DependentUpon>ScreenLock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Screen\ScreenShare.resx">
       <DependentUpon>ScreenShare.cs</DependentUpon>

