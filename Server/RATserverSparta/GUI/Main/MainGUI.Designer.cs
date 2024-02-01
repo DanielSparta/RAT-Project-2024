@@ -292,7 +292,7 @@
             this.HostValue.Name = "HostValue";
             this.HostValue.Size = new System.Drawing.Size(196, 31);
             this.HostValue.TabIndex = 13;
-            this.HostValue.Text = "192.168.1.18";
+            this.HostValue.Text = "0.0.0.0";
             // 
             // label4
             // 

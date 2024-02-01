@@ -44,7 +44,7 @@ namespace RATserverSparta
                 //Run Client Accepting at a new thread
                 new Thread(new ThreadStart(() =>
                 {
-                    //Accept() is not the default Socket function, This is my own function at the SocketServer class.
+                    //@NOTICE: Accept() is not the default Socket function, This is my own function at the SocketServer class.
                     this.SocketServerClassInstance.Accept();
                 })).Start();
             }
