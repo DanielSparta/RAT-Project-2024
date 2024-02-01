@@ -16,7 +16,14 @@ namespace RATclientSparta.Setup.RegistryData
         public void DeleteValue(string value)
         {
             RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\ClientValues", true);
-            key.DeleteValue(value);
+            try
+            {
+                key.DeleteValue(value);
+            }
+            catch
+            {
+                //Value not exist
+            }
         }
     }
 }
