@@ -41,7 +41,7 @@ namespace SpartaRATclient
             return new IPEndPoint(IPAddress.Parse("172.0.2.131"), 81);
         }
 
-        public void Connect()
+        public static void Connect()
         {
             Socket ServerSocketObject = SetSocket();
             IPEndPoint IPEndpoint = SetIpAddress();

