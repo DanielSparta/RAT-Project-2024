@@ -90,14 +90,14 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.toolStripMenuItem1.Text = "Client chat";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(150, 22);
             this.toolStripMenuItem3.Text = "Keylogger";
             // 
             // Welcome
@@ -367,14 +367,14 @@
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(150, 22);
             this.toolStripMenuItem4.Text = "Blind shell";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(147, 6);
             // 
             // tabs
             // 
@@ -404,25 +404,25 @@
             this.toolStripMenuItem3,
             this.screenLockToolStripMenuItem});
             this.StripMenu.Name = "StripMenu";
-            this.StripMenu.Size = new System.Drawing.Size(181, 236);
+            this.StripMenu.Size = new System.Drawing.Size(151, 214);
             // 
             // serverCreationStripMenuItem
             // 
             this.serverCreationStripMenuItem.Name = "serverCreationStripMenuItem";
-            this.serverCreationStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.serverCreationStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.serverCreationStripMenuItem.Text = "Server Create";
             this.serverCreationStripMenuItem.Click += new System.EventHandler(this.serverCreationStripMenuItem_Click);
             // 
             // buildProgramToolStripMenuItem
             // 
             this.buildProgramToolStripMenuItem.Name = "buildProgramToolStripMenuItem";
-            this.buildProgramToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buildProgramToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.buildProgramToolStripMenuItem.Text = "Build program";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(147, 6);
             // 
             // toolStripMenuItem5
             // 
@@ -433,7 +433,7 @@
             this.toolStripMenuItem7,
             this.toolStripMenuItem8});
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(150, 22);
             this.toolStripMenuItem5.Text = "Tools";
             // 
             // toolStripMenuItem6
@@ -472,20 +472,20 @@
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(150, 22);
             this.toolStripMenuItem9.Text = "Screen Share";
             this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(150, 22);
             this.toolStripMenuItem10.Text = "Camera view";
             // 
             // screenLockToolStripMenuItem
             // 
             this.screenLockToolStripMenuItem.Name = "screenLockToolStripMenuItem";
-            this.screenLockToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.screenLockToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.screenLockToolStripMenuItem.Text = "Screen lock";
             this.screenLockToolStripMenuItem.Click += new System.EventHandler(this.screenLockToolStripMenuItem_Click);
             // 
