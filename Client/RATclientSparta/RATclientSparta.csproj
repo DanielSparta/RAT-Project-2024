@@ -72,9 +72,9 @@
     <Compile Include="Setup\Registry\Delete.cs" />
     <Compile Include="Setup\Registry\Get.cs" />
     <Compile Include="Setup\Schtask\schtask.cs" />
-    <Compile Include="Socket\EndPoint.cs" />
-    <Compile Include="Socket\Socket.cs" />
-    <Compile Include="Socket\Server.cs" />
+    <Compile Include="Socket\ClientEndPoint.cs" />
+    <Compile Include="Socket\SocketServer.cs" />
+    <Compile Include="Socket\ServerEndpoint.cs" />
     <Compile Include="Tools\Chat\Chat.cs">
       <SubType>Form</SubType>
     </Compile>

