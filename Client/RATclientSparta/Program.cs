@@ -30,11 +30,11 @@ namespace RATclientSparta
             while (true)
             {
                 //SocketClient instance connecting to server
-                Socket Server = SocketServer.Connect();
+                System.Net.Sockets.Socket SocketConnection = Socket.SocketServer.Set(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
                 //reading data from server - when connection lost, it will return and then Connect() again
-                ServerData server = new ServerData(Server);
-                server.Receive();
+                ServerData Connection = new ServerData(SocketConnection);
+                Connection.Receive();
             }
         }
 

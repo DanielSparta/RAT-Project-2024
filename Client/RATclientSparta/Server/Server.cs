@@ -30,10 +30,10 @@ namespace RATclientSparta.Server
         public event paintStreamEvent PaintStream;
         public event PaintConfig PaintConfigs;
 
-        public Socket SocketConnection = default(Socket);
+        public System.Net.Sockets.Socket SocketConnection = default(System.Net.Sockets.Socket);
         public bool ServerConnected = false;
 
-        public ServerData(Socket ServerSocket)
+        public ServerData(System.Net.Sockets.Socket ServerSocket)
         {
             this.ChatMessageEvent = delegate { };
             this.LostConnectionEvent = delegate { };

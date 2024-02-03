@@ -12,9 +12,9 @@ namespace RATclientSparta.Server.Send
 {
     public class SendData
     {
-        private Socket server;
+        private System.Net.Sockets.Socket server;
         private bool ServerConnected = true;
-        public SendData(Socket server, bool FirstRun)
+        public SendData(System.Net.Sockets.Socket server, bool FirstRun)
         {
             this.server = server;
             if (FirstRun)

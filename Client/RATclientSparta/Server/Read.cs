@@ -9,8 +9,8 @@ namespace RATclientSparta.Server
 {
     public class ReadData
     {
-        private Socket ServerSocket;
-        public ReadData(Socket ServerSocket)
+        private System.Net.Sockets.Socket ServerSocket;
+        public ReadData(System.Net.Sockets.Socket ServerSocket)
         {
             this.ServerSocket = ServerSocket;
         }

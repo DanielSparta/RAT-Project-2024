@@ -74,7 +74,7 @@
     <Compile Include="Setup\Schtask\schtask.cs" />
     <Compile Include="Socket\EndPoint.cs" />
     <Compile Include="Socket\Socket.cs" />
-    <Compile Include="Socket\SocketServer.cs" />
+    <Compile Include="Socket\Server.cs" />
     <Compile Include="Tools\Chat\Chat.cs">
       <SubType>Form</SubType>
     </Compile>

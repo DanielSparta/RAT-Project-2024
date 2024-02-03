@@ -18,7 +18,7 @@ namespace RATclientSparta.Tools.Chat
     {
         private SendData client;
         private ServerData server;
-        private Socket socket;
+        private System.Net.Sockets.Socket socket;
         private bool formClose = false;
         public Chat(ServerData server)
         {
