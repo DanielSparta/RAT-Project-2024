@@ -38,7 +38,7 @@ Coming soon
 **_I would really appreciate any CR or ideas_**
 
 ## Legacy version
-Legacy version of SpartaRAT (https://github.com/DanielSparta/RAT-Project-2022) - Created in 2022, with very bad code.
+Legacy version of SpartaRAT (https://github.com/DanielSparta/RAT-Project-2022) - Created in 2022.
 
 ## Authors
 
