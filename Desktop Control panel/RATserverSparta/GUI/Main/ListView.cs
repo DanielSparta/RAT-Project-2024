@@ -38,7 +38,7 @@ namespace RATserverSparta.GUI.Main
                     if (CurrentListviewItemSelected != null)
                     {
                         string data = Encoding.ASCII.GetString(message);
-                        if (!data.EndsWith("(Probably removed by AV or by C&C Server)"))
+                        if (!data.EndsWith("\0\0"))
                             this.mainGUI.ClientsList.Items[CurrentListviewItemSelected.Index].SubItems[index].Text = data;
                         else
                         {
