@@ -9,7 +9,7 @@ namespace RATclientSparta.Setup.RegistryData
 {
     public class RegistryCreate
     {
-        public void Create(string name, string value)
+        public static void Create(string name, string value)
         {
             using (RegistryKey key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(@"Software\ClientValues"))
             {

