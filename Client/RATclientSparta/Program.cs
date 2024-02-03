@@ -32,8 +32,9 @@ namespace RATclientSparta
                 //SocketClient instance connecting to server
                 System.Net.Sockets.Socket SocketConnection = Socket.SocketServer.Set(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-                //reading data from server - when connection lost, it will return and then Connect() again
+                //Calling to an instance constructor
                 ServerData Connection = new ServerData(SocketConnection);
+                //reading data from server - when connection lost, it will return and then Connect() again
                 Connection.Receive();
             }
         }
