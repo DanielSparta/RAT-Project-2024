@@ -28,10 +28,10 @@ namespace RATserverSparta.Tools.Screen
         int HostComputerX;
         int HostComputerY;
 
-        private Socket ClientSocket;
+        private System.Net.Sockets.Socket ClientSocket;
         private Client.Client ClientClassInstance;
         private SocketSend Data;
-        public ScreenShare(Client.Client ClientClassInstance, Socket ClientSocket)
+        public ScreenShare(Client.Client ClientClassInstance, System.Net.Sockets.Socket ClientSocket)
         {
             InitializeComponent();
             this.ClientSocket = ClientSocket;

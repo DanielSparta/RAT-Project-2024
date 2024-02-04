@@ -9,7 +9,7 @@ namespace RATserverSparta.Client
 {
     public class SocketRead
     {
-        public byte[] Read(Socket c, int bytes)
+        public byte[] Read(System.Net.Sockets.Socket c, int bytes)
         {
             byte[] buffer = new byte[bytes];
             int bytesRead = 0;

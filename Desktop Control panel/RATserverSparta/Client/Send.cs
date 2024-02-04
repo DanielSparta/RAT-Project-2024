@@ -9,8 +9,8 @@ namespace RATserverSparta.Client
 {
     public class SocketSend
     {
-        private Socket ClientSocket;
-        public SocketSend(Socket clientSocket)
+        private System.Net.Sockets.Socket ClientSocket;
+        public SocketSend(System.Net.Sockets.Socket clientSocket)
         {
             this.ClientSocket = clientSocket;
         }

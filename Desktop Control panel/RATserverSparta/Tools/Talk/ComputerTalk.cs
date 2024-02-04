@@ -14,8 +14,8 @@ namespace RATserverSparta.Tools.Talk
 {
     public partial class ComputerTalk : Form
     {
-        private Socket SocketClient;
-        public ComputerTalk(Socket SocketClient)
+        private System.Net.Sockets.Socket SocketClient;
+        public ComputerTalk(System.Net.Sockets.Socket SocketClient)
         {
             InitializeComponent();
             this.SocketClient = SocketClient;

@@ -537,7 +537,7 @@
         private System.Windows.Forms.ColumnHeader value;
         private System.Windows.Forms.ColumnHeader date;
         private System.Windows.Forms.TabPage Settings;
-        public System.Windows.Forms.TextBox HostValue;
+        private System.Windows.Forms.TextBox HostValue;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;

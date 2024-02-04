@@ -13,8 +13,8 @@ namespace RATserverSparta.Tools.Shell
 {
     public partial class Shell : Form
     {
-        private Socket ClientSocket;
-        public Shell(Socket ClientSocket)
+        private System.Net.Sockets.Socket ClientSocket;
+        public Shell(System.Net.Sockets.Socket ClientSocket)
         {
             InitializeComponent();
             this.ClientSocket = ClientSocket;

