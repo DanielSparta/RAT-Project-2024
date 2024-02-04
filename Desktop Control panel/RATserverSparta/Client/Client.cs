@@ -38,9 +38,6 @@ namespace RATserverSparta.Client
 
         public void Receive()
         {
-            //I want to see only relevant code at Receive() function, So i created Setup() function that doing the important setup things
-            Setup();
-
             //Creating instance to the Client Message Read class
             SocketRead ClientMessage = new SocketRead();
 
@@ -92,7 +89,7 @@ namespace RATserverSparta.Client
             });
         }
 
-        private void Setup()
+        public void Setup()
         {
             this.ClientConnected = true;
             LogAdd("[+] Client connected", this.ClientSocket.RemoteEndPoint.ToString());

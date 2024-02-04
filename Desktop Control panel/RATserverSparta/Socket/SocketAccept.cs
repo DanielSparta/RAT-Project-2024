@@ -66,6 +66,7 @@ namespace RATserverSparta.Sockets
             //Sending each client to his own class instance
             new Thread((() =>
             {
+                ClientClassInstance.Setup();
                 ClientClassInstance.Receive();
             })).Start();
         }
