@@ -8,8 +8,13 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Windows.Forms;
 
+
 namespace RATserverSparta.Sockets
 {
+//@TODO!!!: Add class for: Create, Accept, NewClient - And to use Get parameter on ClientInstanceMap and ClientSocketMap
+//@TODO!!!: Add class for: Create, Accept, NewClient - And to use Get parameter on ClientInstanceMap and ClientSocketMap
+//@TODO!!!: Add class for: Create, Accept, NewClient - And to use Get parameter on ClientInstanceMap and ClientSocketMap
+//@TODO!!!: Add class for: Create, Accept, NewClient - And to use Get parameter on ClientInstanceMap and ClientSocketMap
     public class Server
     {
         public Dictionary<string, Client.Client> ClientInstanceMap = new Dictionary<string, Client.Client>();
