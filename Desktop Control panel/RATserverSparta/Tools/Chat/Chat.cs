@@ -56,7 +56,7 @@ namespace RATserverSparta.Tools.Chat
         {
             if (text.Text.Length > 0)
             {
-                this.Data.Send(Encoding.ASCII.GetBytes(text.Text), 1);
+                this.Data.Send(Encoding.UTF8.GetBytes(text.Text), 1);
                 talk.Text += "You: " + text.Text + Environment.NewLine;
                 text.Text = "";
             }
