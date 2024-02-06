@@ -33,7 +33,7 @@ namespace RATserverSparta.Tools.Chat
 
         private void UpdatingMessages(byte[] buffer)
         {
-            string a = Encoding.ASCII.GetString(buffer);
+            string a = Encoding.UTF8.GetString(buffer);
             this.Invoke((MethodInvoker)delegate
             {
                 talk.Text += "Client: " + a + Environment.NewLine;
