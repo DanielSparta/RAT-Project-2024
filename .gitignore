@@ -3,9 +3,6 @@ Malware/.vs/*
 Malware/RATclientSparta/bin/*
 Malware/RATclientSparta/obj/*
 
-Malware/RATserverSparta/bin/*
-Malware/RATserverSparta/obj/*
-Desktop Control panel/.vs/RATserverSparta/v17/.suo
-Desktop Control panel/.vs/RATserverSparta/FileContentIndex/d011a3fc-330b-4233-991d-b1827ec0f709.vsidx
-Desktop Control panel/.vs/RATserverSparta/FileContentIndex/9d06a217-a245-4eb2-b170-9ffbfe1cba08.vsidx
-Desktop Control panel/.vs/RATserverSparta/FileContentIndex/87f7d329-4089-41c8-bfdc-0ff4a7c87321.vsidx
+Desktop Control panel/.vs/*
+Desktop Control panel/RATserverSparta/bin/*
+Desktop Control panel/RATserverSparta/obj/*
