@@ -49,18 +49,18 @@
     <Compile Include="Client\Client.cs" />
     <Compile Include="Client\Read.cs" />
     <Compile Include="Client\Send.cs" />
-    <Compile Include="GUI\Main\ListView.cs" />
-    <Compile Include="GUI\Main\Logs.cs" />
-    <Compile Include="GUI\Main\MainGUI.cs">
+    <Compile Include="GUI\MainScreenGUI\ListView.cs" />
+    <Compile Include="GUI\MainScreenGUI\Logs.cs" />
+    <Compile Include="GUI\MainScreenGUI\MainGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Main\MainGUI.Designer.cs">
+    <Compile Include="GUI\MainScreenGUI\MainGUI.Designer.cs">
       <DependentUpon>MainGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Connection\NewconnectionGUI.cs">
+    <Compile Include="GUI\NewConnectionGUI\NewconnectionGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Connection\NewconnectionGUI.Designer.cs">
+    <Compile Include="GUI\NewConnectionGUI\NewconnectionGUI.Designer.cs">
       <DependentUpon>NewconnectionGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -97,10 +97,10 @@
     <Compile Include="Tools\Talk\ComputerTalk.Designer.cs">
       <DependentUpon>ComputerTalk.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GUI\Main\MainGUI.resx">
+    <EmbeddedResource Include="GUI\MainScreenGUI\MainGUI.resx">
       <DependentUpon>MainGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Connection\NewconnectionGUI.resx">
+    <EmbeddedResource Include="GUI\NewConnectionGUI\NewconnectionGUI.resx">
       <DependentUpon>NewconnectionGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
