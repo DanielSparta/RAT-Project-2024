@@ -1,7 +1,7 @@
 Malware/.vs/*
 
-Malware/RATclientSparta/bin/
-Malware/RATclientSparta/obj/
+Malware/RATclientSparta/bin/*
+Malware/RATclientSparta/obj/*
 
-Malware/RATserverSparta/bin/
-Malware/RATserverSparta/obj/
+Malware/RATserverSparta/bin/*
+Malware/RATserverSparta/obj/*
