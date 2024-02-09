@@ -9,12 +9,12 @@ I update this project very often.
 **This project is created for educational purposes only and does not support any illegal activity**
 
 # Why SpartaRAT is better than the others?
-- Windows defender full bypass using Exclude list and more AV Bypass techniques.
-- Windows defender Exclude list bypass (app not showing at windows defender GUI whitelist while it is).
-- Persistence (using task scheduler).
-- .NET Framework, tested at the latest windows 11, 10, 8.1 versions.
+- Home made code - I am the one who write almost all the code, not ChatGPT or forums
+- Anti Virus bypass - True for today there is no anti virus that detects my program
+- Persistence (using task scheduler)
+- .NET Framework - tested at the latest windows 11, 10, 8.1 versions
 - Open source & Easy to contact the developer
-- Really well written code
+- Really well written code, easy and fun to read and learn
 
   **This is the beginning of the project, alot more stuff will be added soon.**
 
