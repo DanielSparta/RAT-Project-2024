@@ -14,7 +14,7 @@ I update this project very often.
 - Persistence (using task scheduler)
 - .NET Framework - tested at the latest windows 11, 10, 8.1 versions
 - Open source & Easy to contact the developer
-- Really well written code, easy and fun to read, learn, or debugging.
+- Really well written code, easy and fun to read, learn, or debugging
 
   **This is the beginning of the project, alot more stuff will be added soon.**
 
