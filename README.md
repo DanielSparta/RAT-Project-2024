@@ -31,7 +31,7 @@ Coming soon
 - Screen Click
 - Screen Draw
 - Remote Shell
-- Computer speech form text
+- Computer speech from text
 - Screen Lock (Also working after computer restart)
   
 **_Alot More Features Soon_**
