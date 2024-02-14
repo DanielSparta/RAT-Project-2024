@@ -26,7 +26,6 @@ I update this project very often.
 # Web C&C Server
 Coming soon
 
-
 # ![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/78b29c43-c1ec-44ad-8c72-1369ed527d64)
 - Screen Stream
 - Screen Click
