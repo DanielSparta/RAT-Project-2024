@@ -51,22 +51,28 @@ namespace RATserverSparta.Tools.Screen
             g = pictureBox1.CreateGraphics();
             string ClientResolution = this.ClientClassInstance.ScreenResolution;
 
-            Match MatchRegex(string input)
+            try
             {
-                string pattern = @"Width=(\d+),Height=(\d+)";
-                Match m = Regex.Match(input, pattern);
-                return m;
-            }
-            //Client resolution X,Y
-            Match match = MatchRegex(ClientResolution);
-            this.ClientResolutionX = int.Parse(match.Groups[1].Value);
-            this.ClientResolutionY = int.Parse(match.Groups[2].Value);
 
-            //Server resolution X,Y
-            Rectangle resolution = System.Windows.Forms.Screen.PrimaryScreen.Bounds;
-            Match match1 = MatchRegex(resolution.ToString());
-            this.HostComputerX = int.Parse(match1.Groups[1].Value);
-            this.HostComputerY = int.Parse(match1.Groups[2].Value);
+                Match MatchRegex(string input)
+                {
+                    string pattern = @"Width=(\d+),Height=(\d+)";
+                    Match m = Regex.Match(input, pattern);
+                    return m;
+                }
+                //Client resolution X,Y
+                Match match = MatchRegex(ClientResolution);
+                this.ClientResolutionX = int.Parse(match.Groups[1].Value);
+                this.ClientResolutionY = int.Parse(match.Groups[2].Value);
+
+                //Server resolution X,Y
+                Rectangle resolution = System.Windows.Forms.Screen.PrimaryScreen.Bounds;
+                Match match1 = MatchRegex(resolution.ToString());
+                this.HostComputerX = int.Parse(match1.Groups[1].Value);
+                this.HostComputerY = int.Parse(match1.Groups[2].Value);
+
+            }
+            catch { }
 
             this.Size = new Size(500, 300);
         }
