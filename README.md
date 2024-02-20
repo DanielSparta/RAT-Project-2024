@@ -33,7 +33,7 @@ Coming soon
 - Remote Shell
 - Computer speech from text
 - Screen Lock (Also working after computer restart)
-- Camera Share (ESP32 Arduino IDE ~ AI Thinker camera module)
+- Camera Stream (ESP32 Arduino IDE ~ AI Thinker camera module)
   
 **_Alot More Features Soon_**
 **_I would really appreciate any CR or ideas_**
