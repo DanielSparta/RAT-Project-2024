@@ -1,9 +1,9 @@
 #include "esp_camera.h"
 #include <WiFi.h>
 
-const char* ssid = "WIFINAME";
-const char* password = "WIFIPASSWORD";
-const char* host = "HOSTIPADDRESS";
+const char* ssid = "SPARTA";
+const char* password = "danielking12";
+const char* host = "192.168.76.170";
 const int port = 81;
 
 WiFiClient client;
@@ -90,15 +90,10 @@ void sendImageTLV(uint8_t* imageData) {
 
 
 void loop() {
-  // Continuously capture and stream photos
-  while (true) {
     // Capture a photo
     camera_fb_t * fb = esp_camera_fb_get();
-    if (!fb) {
+    if (!fb)
       Serial.println("Camera capture failed");
-      delay(5000); // Wait before attempting again
-      continue;
-    }
 
     // Send photo to server using TLV protocol
     if (connectedToServer) {
@@ -116,6 +111,4 @@ void loop() {
     }
 
     esp_camera_fb_return(fb); // Release the frame buffer
-    delay(5000); // Wait before capturing the next photo
-  }
 }
