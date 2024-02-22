@@ -38,6 +38,16 @@ Coming soon
 **_Alot More Features Soon_**
 **_I would really appreciate any CR or ideas_**
 
+## ESP32-Cam Requirements
+- You must compile the code into the esp32 cam by yourself
+- Atleast Arduino IDE 1.x or any other compiler
+- install board - Arduino AVR Boards (by Arduino)
+- install board - ESP32 board (by Espressif Systems)
+- Choosing Board - AI Thinker ESP32-CAM
+- Choosing the right port
+
+**_Then, Compile._**
+
 ## Legacy version
 Legacy version of SpartaRAT (https://github.com/DanielSparta/RAT-Project-2022) - Created in 2022.
 
