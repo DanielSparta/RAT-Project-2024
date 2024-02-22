@@ -54,3 +54,4 @@ Legacy version of SpartaRAT (https://github.com/DanielSparta/RAT-Project-2022) -
 ## Authors
 
 - [@DanielSparta](https://github.com/DanielSparta)
+- 
