@@ -49,7 +49,9 @@ Coming soon
 
 ## Fun fact
 - I presented this project as a final project of an electronics major
-![98c2372a375ba2a23e55f40a358bdbd7](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/515f0784-1dec-45c7-9027-c6c646494f4f)
+
+![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/205d6626-1d0c-4f0d-a724-c0c631e00174)
+
 
 
 
