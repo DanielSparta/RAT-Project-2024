@@ -47,15 +47,14 @@ Coming soon
 - Choosing Board - AI Thinker ESP32-CAM
 - Choosing the right port
 
+**_Then, Compile._**
+
+
 ## Fun fact
 - I presented this project as a final project of an electronics major
 
 ![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/205d6626-1d0c-4f0d-a724-c0c631e00174)
 
-
-
-
-**_Then, Compile._**
 
 ## Legacy version
 Legacy version of SpartaRAT (https://github.com/DanielSparta/RAT-Project-2022) - Created in 2022.
