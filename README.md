@@ -47,6 +47,11 @@ Coming soon
 - Choosing Board - AI Thinker ESP32-CAM
 - Choosing the right port
 
+## Fun fact
+- I presented this project as a final project of an electronics major
+![98c2372a375ba2a23e55f40a358bdbd7](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/515f0784-1dec-45c7-9027-c6c646494f4f)
+
+
 
 **_Then, Compile._**
 
