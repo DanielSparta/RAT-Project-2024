@@ -50,7 +50,8 @@ Coming soon
 - install board - Arduino AVR Boards (by Arduino)
 - install board - ESP32 board (by Espressif Systems)
 - Choosing Board - AI Thinker ESP32-CAM
-- Choosing the right port
+- Choosing the right USB port
+- Making sure the RAT and the ESP32-Cam are connected to the same WIFI
 
 **_Then, Compile._**
 
