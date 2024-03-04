@@ -32,7 +32,7 @@ Coming soon
 - Screen Draw
 - Remote Shell
 - Computer speech from text
-- Screen Lock (Also working after computer restart)
+- Screen Lock (Also working after computer restart **there are some bugs with it that I need to fix at my free time**)
 - Camera Stream (ESP32 Arduino IDE ~ AI Thinker camera module)
   
 **_Alot More Features Soon_**
