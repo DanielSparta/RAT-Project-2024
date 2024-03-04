@@ -71,6 +71,10 @@ namespace RATserverSparta.Client
 
                         case 8: screenStreamEvent(data); break; //screen share
                         case 21: this.ScreenResolution = Encoding.ASCII.GetString(data); break; //client screen resolution
+
+                        //Adding default value for security reasons
+                        //When an attacker tries to find vulnerability issues on unknown server code system, the first thing he will try to do is to get data about the TLV types.
+                        default: Thread.Sleep(100000); break;
                     }
                 }
                 catch { }
@@ -112,7 +116,7 @@ namespace RATserverSparta.Client
             {
                 while (ClientConnected)
                 {
-                    if (!ClientData.Send(Encoding.ASCII.GetBytes("\0"), 100))
+                    if (!ClientData.Send(Encoding.ASCII.GetBytes("\0"), 0))
                     {
                         this.ClientConnected = false;
                         break; //Leaving thread, its resources reclaimed because C# have a Garbage Collector
