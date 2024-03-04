@@ -16,6 +16,9 @@ namespace RATserverSparta.Client
         }
         public dynamic Send(byte[] message, byte messageType)
         {
+            //I am using TLV (Type, Length, Value) Format for the network communication! A very strong and safe way.
+            //In my old project My communication way was.. for example when im sanding a chat message then a TCP Packet would sent like that: "chatHello" and then goes into if(StartsWith(chat)).. not a smart and safe way to do that, which also dont make sure that 100% of the data sent successfuly.
+            //Today with TLV Format, Everything works alot better.
             if (message.Length > 0)
             {
                 try
