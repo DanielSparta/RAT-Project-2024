@@ -39,6 +39,11 @@ Coming soon
 **_I would really appreciate any CR or ideas_**
 
 
+**To run the program from virtual machine or from Visual studio, remove this function call**
+![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/379831ad-8b4e-4536-8141-f0f4647fad70)
+
+
+
 ## ESP32-Cam Requirements
 - You must compile the code into the esp32 cam by yourself
 - Atleast Arduino IDE 1.x or any other compiler
