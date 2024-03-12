@@ -41,13 +41,13 @@ namespace RATserverSparta
         private void serverCreationStripMenuItem_Click(object sender, EventArgs e)
         {
             //If Socket Server creation returned no errors
-            System.Net.Sockets.Socket Server = SocketCreate.Create(this.HostValue.Text);
+            System.Net.Sockets.Socket Server = SocketCreate.Create(this.HostValue.Text, this);
             if (Server != null)
             {
                 //Run Client Accepting at a new thread
                 new Thread(new ThreadStart(() =>
                 {
-                    //@NOTICE: Accept() is not the default Socket function, This is my own function at the SocketServer class.
+                    //@NOTICE: Accept() is not the default Socket function, This is my own function at the SocketServer class which calls to Socket.Accept() real function.
                     this.SocketAcceptClassInstance.Accept(Server);
                 })).Start();
             }

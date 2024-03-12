@@ -76,6 +76,8 @@
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
             this.screenLockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listenBacklog = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.Welcome.SuspendLayout();
             this.ClientList.SuspendLayout();
             this.Logs.SuspendLayout();
@@ -267,6 +269,8 @@
             // 
             // Settings
             // 
+            this.Settings.Controls.Add(this.listenBacklog);
+            this.Settings.Controls.Add(this.label3);
             this.Settings.Controls.Add(this.HostValue);
             this.Settings.Controls.Add(this.label4);
             this.Settings.Controls.Add(this.pictureBox3);
@@ -335,7 +339,7 @@
             // lineup
             // 
             this.lineup.AutoSize = true;
-            this.lineup.Location = new System.Drawing.Point(14, 52);
+            this.lineup.Location = new System.Drawing.Point(14, 100);
             this.lineup.Name = "lineup";
             this.lineup.Size = new System.Drawing.Size(96, 18);
             this.lineup.TabIndex = 7;
@@ -345,7 +349,7 @@
             // top
             // 
             this.top.AutoSize = true;
-            this.top.Location = new System.Drawing.Point(14, 81);
+            this.top.Location = new System.Drawing.Point(14, 129);
             this.top.Name = "top";
             this.top.Size = new System.Drawing.Size(73, 18);
             this.top.TabIndex = 8;
@@ -489,6 +493,28 @@
             this.screenLockToolStripMenuItem.Text = "Screen lock";
             this.screenLockToolStripMenuItem.Click += new System.EventHandler(this.screenLockToolStripMenuItem_Click);
             // 
+            // listenBacklog
+            // 
+            this.listenBacklog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listenBacklog.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.listenBacklog.Font = new System.Drawing.Font("Yu Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listenBacklog.Location = new System.Drawing.Point(155, 50);
+            this.listenBacklog.Multiline = true;
+            this.listenBacklog.Name = "listenBacklog";
+            this.listenBacklog.Size = new System.Drawing.Size(196, 31);
+            this.listenBacklog.TabIndex = 15;
+            this.listenBacklog.Text = "10";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(10, 52);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 19);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Listen Backlog:";
+            // 
             // MainGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -561,6 +587,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
         private System.Windows.Forms.ToolStripMenuItem screenLockToolStripMenuItem;
+        public System.Windows.Forms.TextBox listenBacklog;
+        private System.Windows.Forms.Label label3;
     }
 }
 
