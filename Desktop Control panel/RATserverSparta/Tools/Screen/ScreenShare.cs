@@ -110,55 +110,61 @@ namespace RATserverSparta.Tools.Screen
 
         void screenStream(byte[] buffer)
         {
-            try
+            char biggerValue(int[] rgb)
             {
-                // Count occurrences of each byte
-                Dictionary<byte, int> byteCounts = new Dictionary<byte, int>();
-
-                foreach (byte b in buffer)
-                {
-                    if (byteCounts.ContainsKey(b))
-                        byteCounts[b]++;
-                    else
-                        byteCounts[b] = 1;
-                }
-
-                // Find the byte that appears the most
-                byte mostCommonByte = byteCounts.OrderByDescending(x => x.Value).First().Key;
-
-                // Create the "mostbytes" string
-                string mostbytes = mostCommonByte.ToString("X2");
-
-                // If the most common byte is "FF" (white), set "mostbytes" to "FF"
-                if (mostCommonByte == 0xFF)
-                {
-                    // Check if "FF" is the only byte in the buffer
-                    if (byteCounts.Count == 1)
-                        mostbytes = "FF";
-                    else
-                    {
-                        // If "FF" is not the only byte, find the next most common byte
-                        var secondMostCommonByte = byteCounts.OrderByDescending(x => x.Value).ElementAt(1).Key;
-                        mostbytes = secondMostCommonByte.ToString("X2");
-                    }
-                }
-
-                // Use "mostbytes" as needed
-                this.Invoke((MethodInvoker)delegate
-                {
-                    this.label1.Text = mostbytes;
-                });
+                if (rgb[0] > rgb[1] && rgb[0] > rgb[2])
+                    return 'r';
+                if (rgb[1] > rgb[0] && rgb[1] > rgb[2])
+                    return 'g';
+                else
+                    return 'b';
             }
-            catch { }
 
             try
             {
                 MemoryStream imageStream = new MemoryStream(buffer);
                 Image receivedImage = Image.FromStream(imageStream);
                 pictureBox1.Image = receivedImage;
+
+                int r = 0, g = 0, b = 0;
+                // Check RGB values
+                Bitmap bitmap = new Bitmap(receivedImage);
+                for (int y = 0; y < bitmap.Height; y++)
+                {
+                    for (int x = 0; x < bitmap.Width; x++)
+                    {
+                        Color pixelColor = bitmap.GetPixel(x, y);
+                        int red = pixelColor.R;
+                        int green = pixelColor.G;
+                        int blue = pixelColor.B;
+                        int[] data = { red, green, blue };
+                        char charecter = biggerValue(data);
+                        switch (charecter)
+                        {
+                            case 'r': r++;  break;
+                            case 'g': g++;  break;
+                            case 'b': b++;  break;
+                        }
+                    }
+                }
+                int[] RGBData = { r, g, b };
+                char charecterData = biggerValue(RGBData);
+                this.Invoke((MethodInvoker)delegate
+                {
+                    switch (charecterData)
+                    {
+                        case 'r': this.label1.Text = "red"; break;
+                        case 'g': this.label1.Text = "green"; break;
+                        case 'b': this.label1.Text = "blue"; break;
+                    }
+                });
             }
-            catch { }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
         }
+
 
 
 
