@@ -141,9 +141,9 @@ namespace RATserverSparta.Tools.Screen
                         char charecter = biggerValue(data);
                         switch (charecter)
                         {
-                            case 'r': r++;  break;
-                            case 'g': g++;  break;
-                            case 'b': b++;  break;
+                            case 'r': r++; break;
+                            case 'g': g++; break;
+                            case 'b': b++; break;
                         }
                     }
                 }
@@ -156,6 +156,7 @@ namespace RATserverSparta.Tools.Screen
                         case 'r': this.label1.Text = "red"; break;
                         case 'g': this.label1.Text = "green"; break;
                         case 'b': this.label1.Text = "blue"; break;
+                        
                     }
                 });
             }

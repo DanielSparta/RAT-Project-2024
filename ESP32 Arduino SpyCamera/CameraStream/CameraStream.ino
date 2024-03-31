@@ -1,9 +1,9 @@
 #include "esp_camera.h"
 #include <WiFi.h>
 
-const char* ssid = "SPARTA";
-const char* password = "danielking12";
-const char* host = "192.168.122.170";
+const char* ssid = "yoni";
+const char* password = "12345678";
+const char* host = "192.168.148.170";
 const int port = 81;
 
 WiFiClient client;

