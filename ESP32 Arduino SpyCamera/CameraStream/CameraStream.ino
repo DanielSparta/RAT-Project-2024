@@ -1,5 +1,6 @@
 #include "esp_camera.h"
 #include <WiFi.h>
+#define LED 4
 
 const char* ssid = "SPARTA";
 const char* password = "danielking12";
@@ -16,6 +17,7 @@ bool connectedToServer = false;
 void setup() {
   Serial.begin(115200);
   Serial.println();
+  pinMode(LED, OUTPUT);
   digitalWrite(4, HIGH);
   // Connect to Wi-Fi
   Serial.print("Connecting to ");
