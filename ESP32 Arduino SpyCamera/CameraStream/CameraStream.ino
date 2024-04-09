@@ -16,7 +16,7 @@ bool connectedToServer = false;
 void setup() {
   Serial.begin(115200);
   Serial.println();
-  
+  digitalWrite(4, HIGH);
   // Connect to Wi-Fi
   Serial.print("Connecting to ");
   Serial.println(ssid);
