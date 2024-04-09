@@ -110,60 +110,60 @@ namespace RATserverSparta.Tools.Screen
 
         void screenStream(byte[] buffer)
         {
-            char biggerValue(int[] rgb)
+            this.Invoke((MethodInvoker)delegate
             {
-                if (rgb[0] > rgb[1] && rgb[0] > rgb[2])
-                    return 'r';
-                if (rgb[1] > rgb[0] && rgb[1] > rgb[2])
-                    return 'g';
-                else
-                    return 'b';
-            }
-
-            try
-            {
-                MemoryStream imageStream = new MemoryStream(buffer);
-                Image receivedImage = Image.FromStream(imageStream);
-                pictureBox1.Image = receivedImage;
-
-                int r = 0, g = 0, b = 0;
-                // Check RGB values
-                Bitmap bitmap = new Bitmap(receivedImage);
-                for (int y = 0; y < bitmap.Height; y++)
+                char biggerValue(int[] rgb)
                 {
-                    for (int x = 0; x < bitmap.Width; x++)
+                    if (rgb[0] > rgb[1] && rgb[0] > rgb[2])
+                        return 'r';
+                    if (rgb[1] > rgb[0] && rgb[1] > rgb[2])
+                        return 'g';
+                    else
+                        return 'b';
+                }
+
+                try
+                {
+                    MemoryStream imageStream = new MemoryStream(buffer);
+                    Image receivedImage = Image.FromStream(imageStream);
+                    pictureBox1.Image = receivedImage;
+
+                    int r = 0, g = 0, b = 0;
+                    // Check RGB values
+                    Bitmap bitmap = new Bitmap(receivedImage);
+                    for (int y = 0; y < bitmap.Height; y++)
                     {
-                        Color pixelColor = bitmap.GetPixel(x, y);
-                        int red = pixelColor.R;
-                        int green = pixelColor.G;
-                        int blue = pixelColor.B;
-                        int[] data = { red, green, blue };
-                        char charecter = biggerValue(data);
-                        switch (charecter)
+                        for (int x = 0; x < bitmap.Width; x++)
                         {
-                            case 'r': r++; break;
-                            case 'g': g++; break;
-                            case 'b': b++; break;
+                            Color pixelColor = bitmap.GetPixel(x, y);
+                            int red = pixelColor.R;
+                            int green = pixelColor.G;
+                            int blue = pixelColor.B;
+                            int[] data = { red, green, blue };
+                            char charecter = biggerValue(data);
+                            switch (charecter)
+                            {
+                                case 'r': r++; break;
+                                case 'g': g++; break;
+                                case 'b': b++; break;
+                            }
                         }
                     }
-                }
-                int[] RGBData = { r, g, b };
-                char charecterData = biggerValue(RGBData);
-                this.Invoke((MethodInvoker)delegate
-                {
+                    int[] RGBData = { r, g, b };
+                    char charecterData = biggerValue(RGBData);
                     switch (charecterData)
                     {
                         case 'r': this.label1.Text = "red"; break;
                         case 'g': this.label1.Text = "green"; break;
                         case 'b': this.label1.Text = "blue"; break;
-                        
+
                     }
-                });
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-            }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            });
         }
 
 
