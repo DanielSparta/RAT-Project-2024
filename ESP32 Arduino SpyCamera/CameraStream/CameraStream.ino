@@ -4,7 +4,7 @@
 
 const char* ssid = "SPARTA";
 const char* password = "danielking12";
-const char* host = "192.168.42.170";
+const char* host = "192.168.134.170";
 const int port = 81;
 
 WiFiClient client;
