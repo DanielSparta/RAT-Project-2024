@@ -76,7 +76,6 @@
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
             this.screenLockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Welcome.SuspendLayout();
             this.ClientList.SuspendLayout();
@@ -424,14 +423,13 @@
             this.toolStripSeparator2,
             this.toolStripMenuItem5,
             this.toolStripMenuItem9,
-            this.toolStripMenuItem10,
             this.toolStripSeparator1,
             this.toolStripMenuItem1,
             this.toolStripMenuItem4,
             this.toolStripMenuItem3,
             this.screenLockToolStripMenuItem});
             this.StripMenu.Name = "StripMenu";
-            this.StripMenu.Size = new System.Drawing.Size(181, 236);
+            this.StripMenu.Size = new System.Drawing.Size(151, 192);
             // 
             // serverCreationStripMenuItem
             // 
@@ -502,12 +500,6 @@
             this.toolStripMenuItem9.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem9.Text = "Screen Share";
             this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
-            // 
-            // toolStripMenuItem10
-            // 
-            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem10.Text = "Camera view";
             // 
             // screenLockToolStripMenuItem
             // 
@@ -586,7 +578,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
         private System.Windows.Forms.ToolStripMenuItem screenLockToolStripMenuItem;
         public System.Windows.Forms.TextBox listenBacklog;
         private System.Windows.Forms.Label label3;
