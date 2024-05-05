@@ -18,7 +18,7 @@ namespace RATserverSparta.Client
 
         public event LogAddValue CreateLogValue;
         public event ListViewItemAdd ListViewAction;
-        public event GotChatMessage chatMessageEvent;
+        public event GotChatMessage MessageEvent;
         public event screenStream screenStreamEvent;
 
         public string ScreenResolution;
@@ -31,7 +31,7 @@ namespace RATserverSparta.Client
             this.ClientSocket = Server;
             this.CreateLogValue = delegate { };
             this.ListViewAction = delegate { };
-            this.chatMessageEvent = delegate { };
+            this.MessageEvent = delegate { };
             this.screenStreamEvent = delegate { };
     }
 
@@ -56,7 +56,7 @@ namespace RATserverSparta.Client
                     switch (type)
                     {
                         case 0: this.ClientConnected = false; break; //Logout
-                        case 1: chatMessageEvent(data); break; //chat message
+                        case 1: MessageEvent(data); break; //chat message
 
                             //GUI Column Creating (Start)
                         case 19: ListViewAction.Invoke("Editing", ClientSocket, data, 7); break; //App opening date
