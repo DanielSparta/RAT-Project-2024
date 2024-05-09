@@ -77,6 +77,8 @@
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.screenLockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shootMisslesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adsToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.Welcome.SuspendLayout();
             this.ClientList.SuspendLayout();
             this.Logs.SuspendLayout();
@@ -427,9 +429,11 @@
             this.toolStripMenuItem1,
             this.toolStripMenuItem4,
             this.toolStripMenuItem3,
-            this.screenLockToolStripMenuItem});
+            this.screenLockToolStripMenuItem,
+            this.adsToolStripMenuItem,
+            this.shootMisslesToolStripMenuItem});
             this.StripMenu.Name = "StripMenu";
-            this.StripMenu.Size = new System.Drawing.Size(151, 192);
+            this.StripMenu.Size = new System.Drawing.Size(266, 242);
             // 
             // serverCreationStripMenuItem
             // 
@@ -508,6 +512,19 @@
             this.screenLockToolStripMenuItem.Text = "Screen lock";
             this.screenLockToolStripMenuItem.Click += new System.EventHandler(this.screenLockToolStripMenuItem_Click);
             // 
+            // shootMisslesToolStripMenuItem
+            // 
+            this.shootMisslesToolStripMenuItem.Image = global::RATserverSparta.Properties.Resources.missile;
+            this.shootMisslesToolStripMenuItem.Name = "shootMisslesToolStripMenuItem";
+            this.shootMisslesToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.shootMisslesToolStripMenuItem.Text = "Shoot Missiles (ESP32 Board feature)";
+            this.shootMisslesToolStripMenuItem.Click += new System.EventHandler(this.shootMisslesToolStripMenuItem_Click);
+            // 
+            // adsToolStripMenuItem
+            // 
+            this.adsToolStripMenuItem.Name = "adsToolStripMenuItem";
+            this.adsToolStripMenuItem.Size = new System.Drawing.Size(262, 6);
+            // 
             // MainGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -581,6 +598,8 @@
         private System.Windows.Forms.ToolStripMenuItem screenLockToolStripMenuItem;
         public System.Windows.Forms.TextBox listenBacklog;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripMenuItem shootMisslesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator adsToolStripMenuItem;
     }
 }
 
