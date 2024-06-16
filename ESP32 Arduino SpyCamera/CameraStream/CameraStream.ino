@@ -4,7 +4,7 @@
 
 const char* ssid = "SPARTA";
 const char* password = "danielking12";
-const char* host = "192.168.134.170";
+const char* host = "192.168.103.170";
 const int port = 81;
 
 WiFiClient client;
@@ -18,7 +18,7 @@ void setup() {
   Serial.begin(115200);
   Serial.println();
   pinMode(LED, OUTPUT);
-  digitalWrite(4, HIGH);
+  analogWrite(4, 1);
   // Connect to Wi-Fi
   Serial.print("Connecting to ");
   Serial.println(ssid);
