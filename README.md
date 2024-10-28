@@ -6,8 +6,6 @@ I update this project very often.
 
 **I will greatly appreciate all those who could invest their time in PR (Pull Request) or CR (Code Review) my project.**
 
-**This project is created for educational purposes only and does not support any illegal activity**
-
 # Why SpartaRAT is better than the others?
 - Anti Virus bypass - True for today there is no anti virus that detects my program
 - ESP32 Real life boards support - You can do really cool things
