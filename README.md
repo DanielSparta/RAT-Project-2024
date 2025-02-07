@@ -9,7 +9,7 @@ I update this project very often.
 # Why SpartaRAT is better than the others?
 - Anti Virus bypass - True for today there is no anti virus that detects my program
 - ESP32 Real life boards support - You can do really cool things
-- Persistence (using task scheduler)
+- Persistence (using task scheduler - with powershell obfuscations and c# logical code the anti virus not say anything)
 - .NET Framework - tested at the latest windows 11, 10, 8.1 versions
 - Open source & Easy to contact the developer
 - Really well written code, easy and fun to read, learn, or debugging
