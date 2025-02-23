@@ -16,8 +16,6 @@ I update this project very often.
 - Home made code - I am the one who write almost all the code, not ChatGPT or forums
 - Very soon NAT Hole punching support feature
 
-  **Alot more stuff will be added soon.**
-
 # Desktop C&C Server
 ![image](https://github.com/DanielSparta/2024-RAT-projet/assets/111179755/21ed04f8-30e4-49c7-95a0-9231817bb765)
 
