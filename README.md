@@ -14,6 +14,7 @@ I update this project very often.
 - Open source & Easy to contact the developer
 - Really well written code, easy and fun to read, learn, or debugging
 - Home made code - I am the one who write almost all the code, not ChatGPT or forums
+- Very soon NAT Hole punching support feature
 
   **Alot more stuff will be added soon.**
 
