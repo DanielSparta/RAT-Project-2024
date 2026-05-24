@@ -4,8 +4,6 @@ This RAT project made for fun, I work on updates often.
 I started with this project because I had so many ideas, with code I can be creative. This project is still under work, I will add alot more features.
 I update this project very often.
 
-**I will greatly appreciate all those who could invest their time in PR (Pull Request) or CR (Code Review) my project.**
-
 # Why SpartaRAT is better than the others?
 - Anti Virus bypass - True for today there is no anti virus that detects my program
 - ESP32 Real life boards support - You can do really cool things
